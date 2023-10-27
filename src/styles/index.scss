@@ -1,11 +1,11 @@
 // Base - boilerplate stuff
-@import 'base/reset';
-@import 'base/typography';
+@use 'base/reset';
+@use 'base/typography';
 
 // Helpers - sass tools and functions 
 
 // Components - component-specific styling
-@import 'components/navbar';
+@use 'components/navbar';
 
 // Layout
-@import 'layout/grid';
+@use 'layout/grid';

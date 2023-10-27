@@ -4,19 +4,27 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #FFFBFB;
+}
+
 a {
   color: inherit;
 }
 
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
+  color: #645368;
+}
+
+.h1 {
+  color: #0A0310;
 }
 
 .nav-container {
   display: flex;
   justify-content: flex-end;
   padding: 1rem;
-  background-color: palegoldenrod;
 }
 .nav-container ul {
   display: flex;
