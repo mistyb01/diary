@@ -1,9 +1,9 @@
+import JournalContainer from "./components/JournalContainer";
+
 function App() {
   return (
     <>
-      <div>
-        <p>blep</p>
-      </div>
+      <JournalContainer />
     </>
   );
 }
