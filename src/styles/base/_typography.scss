@@ -1,0 +1,11 @@
+@use '../helpers/variables';
+
+// Typography rules
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: variables.$c-purple-medium;
+}
+
+.h1 {
+    color: variables.$c-navy-black;
+}

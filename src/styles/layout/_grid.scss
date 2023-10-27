@@ -1,0 +1,29 @@
+.layout-grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    > * {
+        padding: 2rem 1.5rem;
+    }
+}
+
+.main-container {
+    grid-column-start: 4;
+    grid-column-end: 10;
+}
+
+.side-panel-container {
+    grid-column-start: 1;
+    grid-column-end: 4; 
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        grid-column-start: 1;
+        grid-column-end: 12;
+    }
+    
+    .side-panel-container {
+        grid-column-start: 1;
+        grid-column-end: 12; 
+    }
+}
