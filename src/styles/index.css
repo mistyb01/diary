@@ -4,8 +4,24 @@
   box-sizing: border-box;
 }
 
+a {
+  color: inherit;
+}
+
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  background-color: palegoldenrod;
+}
+.nav-container ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
 }
 
 /*# sourceMappingURL=index.css.map */

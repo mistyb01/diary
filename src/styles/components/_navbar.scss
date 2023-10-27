@@ -1,0 +1,11 @@
+.nav-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    background-color: palegoldenrod;
+    ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+    }
+}

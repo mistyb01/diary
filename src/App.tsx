@@ -1,17 +1,21 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import JournalContainer from "./components/JournalContainer";
-import Home from "./components/Home";
+import Landing from "./components/Landing";
 import Login from "./components/Login";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" Component={Home} />
-        <Route path="/journal" Component={JournalContainer} />
-        <Route path="/login" Component={Login} />
-      </Routes>
+      <NavBar />
+      <main>
+        <Routes>
+          <Route path="/" Component={Landing} />
+          <Route path="/journal" Component={JournalContainer} />
+          <Route path="/login" Component={Login} />
+        </Routes>
+      </main>
     </Router>
   );
 }
