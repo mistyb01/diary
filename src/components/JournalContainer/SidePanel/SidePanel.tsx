@@ -1,5 +1,5 @@
 const SidePanel = () => {
-  return <>side</>;
+  return <section className="side-panel-container">side</section>;
 };
 
 export default SidePanel;

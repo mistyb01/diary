@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <NavBar />
-      <main>
+      <main className="layout-grid-container">
         <Routes>
           <Route path="/" Component={Landing} />
           <Route path="/journal" Component={JournalContainer} />

@@ -1,5 +1,5 @@
 const EntryContainer = () => {
-  return <>entry</>;
+  return <section className="main-container">entry</section>;
 };
 
 export default EntryContainer;

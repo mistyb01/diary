@@ -24,4 +24,19 @@ body {
   list-style: none;
 }
 
+.layout-grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.main-container {
+  grid-column-start: 4;
+  grid-column-end: 10;
+}
+
+.side-panel-container {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
 /*# sourceMappingURL=index.css.map */
