@@ -1,3 +1,4 @@
+import EntryListItem from "./EntryListItem/EntryListItem";
 import MonthListItem from "./MonthListItem/MonthListItem";
 import * as dayjs from "dayjs";
 
@@ -81,8 +82,19 @@ const YearListItem = () => {
   return (
     <>
       <h2>2023</h2>
-      {getMonthArr().map((monthNumber) => {
-        return <MonthListItem month={monthNumber} />;
+      {getMonthArr().map((monthName) => {
+        return (
+          <MonthListItem month={monthName}>
+            {mockData
+              .filter(
+                (entry) =>
+                  dayjs(entry.creation_timestamp).format("MMMM") === monthName
+              )
+              .map((entry) => (
+                <EntryListItem>{entry.title}</EntryListItem>
+              ))}
+          </MonthListItem>
+        );
       })}
     </>
   );
