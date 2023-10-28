@@ -88,11 +88,18 @@ body {
   padding: 0.5rem 0rem 0.5rem 1rem;
 }
 
+.list-side-panel--entry li {
+  transition: 0.25s ease-in-out;
+}
 .list-side-panel--entry li:first-child {
   margin-top: 0.5rem;
 }
 .list-side-panel--entry li:nth-child(even) {
   background-color: #F9F2F2;
+}
+.list-side-panel--entry li:hover {
+  color: #FF4F79;
+  opacity: 0.75;
 }
 
 .entry-list-item button {

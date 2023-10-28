@@ -38,9 +38,14 @@
 }
 
 .list-side-panel--entry {
+    li { transition: 0.25s ease-in-out; }
     li:first-child { margin-top: 0.5rem; }
     li:nth-child(even) {
         background-color: variables.$c-offwhite;
+    }
+    li:hover {
+        color: variables.$c-hotpink;
+        opacity: 0.75;
     }
 }
 
