@@ -13,16 +13,18 @@ const MonthListItem = ({
   const [showChildren, setShowChildren] = useState(false);
 
   return (
-    <>
+    <li>
       <div
         className="list-toggle"
         onClick={() => setShowChildren(!showChildren)}
       >
-        <h3>{month}</h3>
+        <h3 className="label-bold">{month}</h3>
         {showChildren ? <FiChevronDown /> : <FiChevronRight />}
       </div>
-      {showChildren && <ul className="entry-list-side-panel">{children}</ul>}
-    </>
+      {showChildren && (
+        <ul className="list-side-panel list-side-panel--entry">{children}</ul>
+      )}
+    </li>
   );
 };
 

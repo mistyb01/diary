@@ -6,6 +6,18 @@ body {
     color: variables.$c-purple-medium;
 }
 
-.h1 {
+.heading-top {
     color: variables.$c-navy-black;
+}
+
+.heading-label {
+    font-size: 0.875rem;
+    color: variables.$c-hotpink;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.label-bold {
+    font-size: 1rem;
+    font-weight: 600;
 }

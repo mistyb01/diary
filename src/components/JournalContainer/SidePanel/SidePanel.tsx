@@ -16,7 +16,7 @@ const SidePanel = () => {
       </div>
       {showPanel && (
         <>
-          <h1 className="accent-label">entry list</h1>
+          <h1 className="heading-label">entry list</h1>
 
           {/* TODO: items are mapped to entry data */}
           {showPanel && <YearListItem />}

@@ -1,6 +1,28 @@
+@use '../helpers/variables';
+
 .list-toggle {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.list-toggle--large {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.list-side-panel {
+    list-style: none;
+    li {
+        padding: 0.5rem 1rem;
+    }
+}
+
+.list-side-panel--entry {
+    li:nth-child(even) {
+        background-color: variables.$c-offwhite;
+    }
 }

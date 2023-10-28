@@ -88,14 +88,14 @@ const YearListItem = () => {
   return (
     <>
       <div
-        className="list-toggle"
+        className="list-toggle--large"
         onClick={() => setShowChildren(!showChildren)}
       >
-        <h2>2023</h2>
+        <h2 className="heading-top">2023</h2>
         {showChildren ? <FiChevronDown /> : <FiChevronRight />}
       </div>
       {showChildren && (
-        <>
+        <ul className="list-side-panel">
           {getMonthArr().map((monthName) => {
             return (
               <MonthListItem month={monthName}>
@@ -111,7 +111,7 @@ const YearListItem = () => {
               </MonthListItem>
             );
           })}
-        </>
+        </ul>
       )}
     </>
   );
