@@ -85,7 +85,7 @@ body {
   list-style: none;
 }
 .list-side-panel li {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0rem 0.5rem 1rem;
 }
 
 .list-side-panel--entry li:first-child {
