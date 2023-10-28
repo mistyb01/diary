@@ -43,3 +43,14 @@
     display: flex;
     gap: 1rem;
 }
+
+.reading-mode-toggle-container {
+    background-color: variables.$c-offwhite;
+    padding: 1rem 1.5rem;
+    h1 { margin-bottom: 1.5rem; }
+    > div + div { margin-top: 1rem; }
+}
+
+.radio-option {
+    input { margin-right: 0.5rem; }       
+}

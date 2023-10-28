@@ -3,7 +3,7 @@ const ReadingModeToggle = () => {
     <section className="reading-mode-toggle-container">
       <h1 className="heading-label">change reading mode</h1>
 
-      <div>
+      <div className="radio-option">
         <input
           type="radio"
           id="page-a-day"
@@ -14,7 +14,7 @@ const ReadingModeToggle = () => {
         <label htmlFor="page-a-day">Page-a-day</label>
       </div>
 
-      <div>
+      <div className="radio-option">
         <input type="radio" id="scroll" name="mode" value="scroll" />
         <label htmlFor="scroll">Scroll</label>
       </div>

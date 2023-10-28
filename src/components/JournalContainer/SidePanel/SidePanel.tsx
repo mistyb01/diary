@@ -21,10 +21,14 @@ const SidePanel = () => {
           <h1 className="heading-label">entry list</h1>
 
           {/* TODO: items are mapped to entry data */}
-          {showPanel && <YearListItem />}
+          {showPanel && (
+            <>
+              <YearListItem />
+              <ReadingModeToggle />
+            </>
+          )}
         </>
       )}
-      <ReadingModeToggle />
     </section>
   );
 };

@@ -83,6 +83,21 @@ body {
   gap: 1rem;
 }
 
+.reading-mode-toggle-container {
+  background-color: #F9F2F2;
+  padding: 1rem 1.5rem;
+}
+.reading-mode-toggle-container h1 {
+  margin-bottom: 1.5rem;
+}
+.reading-mode-toggle-container > div + div {
+  margin-top: 1rem;
+}
+
+.radio-option input {
+  margin-right: 0.5rem;
+}
+
 .layout-grid-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
