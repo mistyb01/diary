@@ -1,8 +1,11 @@
 import EntryListItem from "./EntryListItem/EntryListItem";
 import MonthListItem from "./MonthListItem/MonthListItem";
 import * as dayjs from "dayjs";
+import { useState } from "react";
 
 const YearListItem = () => {
+  const [showChildren, setShowChildren] = useState(true);
+
   const mockData = [
     {
       userID: 1,
@@ -81,21 +84,26 @@ const YearListItem = () => {
 
   return (
     <>
-      <h2>2023</h2>
-      {getMonthArr().map((monthName) => {
-        return (
-          <MonthListItem month={monthName}>
-            {mockData
-              .filter(
-                (entry) =>
-                  dayjs(entry.creation_timestamp).format("MMMM") === monthName
-              )
-              .map((entry) => (
-                <EntryListItem>{entry.title}</EntryListItem>
-              ))}
-          </MonthListItem>
-        );
-      })}
+      <h2 onClick={() => setShowChildren(!showChildren)}>2023</h2>
+      {showChildren && (
+        <>
+          {getMonthArr().map((monthName) => {
+            return (
+              <MonthListItem month={monthName}>
+                {mockData
+                  .filter(
+                    (entry) =>
+                      dayjs(entry.creation_timestamp).format("MMMM") ===
+                      monthName
+                  )
+                  .map((entry) => (
+                    <EntryListItem>{entry.title}</EntryListItem>
+                  ))}
+              </MonthListItem>
+            );
+          })}
+        </>
+      )}
     </>
   );
 };

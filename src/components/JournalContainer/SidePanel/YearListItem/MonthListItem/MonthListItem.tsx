@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { useState } from "react";
 
 const MonthListItem = ({
   month,
@@ -7,10 +8,12 @@ const MonthListItem = ({
   month: string;
   children: ReactNode;
 }) => {
+  const [showChildren, setShowChildren] = useState(false);
+
   return (
     <>
-      <h3>{month}</h3>
-      {children}
+      <h3 onClick={() => setShowChildren(!showChildren)}>{month}</h3>
+      {showChildren && <ul className="entry-list-side-panel">{children}</ul>}
     </>
   );
 };
