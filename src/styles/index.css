@@ -99,6 +99,7 @@ body {
 
 .entry-list-item--selected {
   color: #FF4F79;
+  border-left: 5px solid #FF4F79;
 }
 
 .radios {

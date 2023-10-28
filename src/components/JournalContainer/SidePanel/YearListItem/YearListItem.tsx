@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const YearListItem = () => {
   const [showChildren, setShowChildren] = useState(true);
-  const [selectedEntry, setSelectedEntry] = useState(1);
+  const [selectedEntry, setSelectedEntry] = useState<Number | null>(null);
 
   const mockData = [
     {
@@ -85,6 +85,67 @@ const YearListItem = () => {
         "Tried a new recipe for dinner tonight. It turned out delicious!",
       creation_timestamp: "2023-10-18T19:30:00",
     },
+    {
+      id: 11,
+      userID: 1,
+      title: "Autumn Colors",
+      text_body:
+        "Took a walk in the park and admired the beautiful autumn colors.",
+      creation_timestamp: "2023-11-15T14:00:00",
+    },
+    {
+      id: 12,
+      userID: 2,
+      title: "Thanksgiving Feast",
+      text_body:
+        "Celebrated Thanksgiving with a delicious feast and gratitude.",
+      creation_timestamp: "2023-11-25T19:30:00",
+    },
+    {
+      id: 13,
+      userID: 3,
+      title: "Black Friday Shopping",
+      text_body: "Went shopping on Black Friday and got some great deals.",
+      creation_timestamp: "2023-11-26T10:15:00",
+    },
+    {
+      id: 14,
+      userID: 4,
+      title: "First Snowfall",
+      text_body:
+        "Woke up to the first snowfall of the season. It's so magical!",
+      creation_timestamp: "2023-12-03T08:45:00",
+    },
+    {
+      id: 15,
+      userID: 5,
+      title: "Holiday Decorations",
+      text_body: "Spent the day decorating the house for the holiday season.",
+      creation_timestamp: "2023-12-10T16:00:00",
+    },
+    {
+      id: 16,
+      userID: 1,
+      title: "Winter Wonderland",
+      text_body:
+        "Visited a winter wonderland theme park with friends. So much fun!",
+      creation_timestamp: "2023-12-16T14:30:00",
+    },
+    {
+      id: 17,
+      userID: 2,
+      title: "Christmas Eve Celebration",
+      text_body:
+        "Celebrated Christmas Eve with family, exchanging gifts and love.",
+      creation_timestamp: "2023-12-24T20:00:00",
+    },
+    {
+      id: 18,
+      userID: 3,
+      title: "New Year's Resolutions",
+      text_body: "Reflecting on the year and setting New Year's resolutions.",
+      creation_timestamp: "2023-12-31T23:55:00",
+    },
   ];
   function getMonthArr() {
     const monthArr: string[] = [];
@@ -122,7 +183,10 @@ const YearListItem = () => {
                       parseInt(dayjs(b.creation_timestamp).format("D"))
                   )
                   .map((entry) => (
-                    <EntryListItem isSelected={entry.id === selectedEntry}>
+                    <EntryListItem
+                      isSelected={entry.id === selectedEntry}
+                      updateIsSelected={() => setSelectedEntry(entry.id)}
+                    >
                       <span className="label-bold">
                         {dayjs(entry.creation_timestamp).format("D")}
                       </span>

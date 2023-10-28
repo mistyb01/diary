@@ -50,6 +50,7 @@
 
 .entry-list-item--selected {
     color: variables.$c-hotpink;
+    border-left: 5px solid variables.$c-hotpink;
 }
 
 .reading-mode-toggle-container {
