@@ -45,8 +45,11 @@ body {
   list-style: none;
 }
 
+.side-panel-container h1 {
+  margin-bottom: 1rem;
+}
 .side-panel-container > * + * {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .year-list-container > * + * {
@@ -83,14 +86,10 @@ body {
   gap: 1rem;
 }
 
-.reading-mode-toggle-container {
-  background-color: #F9F2F2;
-  padding: 1rem 1.5rem;
+.radios {
+  padding: 0rem 1.5rem;
 }
-.reading-mode-toggle-container h1 {
-  margin-bottom: 1.5rem;
-}
-.reading-mode-toggle-container > div + div {
+.radios > div + div {
   margin-top: 1rem;
 }
 

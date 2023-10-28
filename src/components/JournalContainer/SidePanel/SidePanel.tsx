@@ -18,15 +18,12 @@ const SidePanel = () => {
       </div>
       {showPanel && (
         <>
-          <h1 className="heading-label">entry list</h1>
-
-          {/* TODO: items are mapped to entry data */}
-          {showPanel && (
-            <>
-              <YearListItem />
-              <ReadingModeToggle />
-            </>
-          )}
+          <ReadingModeToggle />
+          <div>
+            <h1 className="heading-label">entry list</h1>
+            {/* TODO: items are mapped to entry data */}
+            <YearListItem />
+          </div>
         </>
       )}
     </section>
