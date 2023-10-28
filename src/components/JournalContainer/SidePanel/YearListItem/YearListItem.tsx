@@ -86,7 +86,7 @@ const YearListItem = () => {
   }
 
   return (
-    <>
+    <div className="year-list-container">
       <div
         className="list-toggle--large"
         onClick={() => setShowChildren(!showChildren)}
@@ -113,7 +113,7 @@ const YearListItem = () => {
           })}
         </ul>
       )}
-    </>
+    </div>
   );
 };
 

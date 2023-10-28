@@ -18,6 +18,7 @@ body {
 }
 
 .heading-top {
+  font-size: 1.75rem;
   color: #0A0310;
 }
 
@@ -42,6 +43,14 @@ body {
   display: flex;
   gap: 2rem;
   list-style: none;
+}
+
+.side-panel-container > * + * {
+  margin-top: 2rem;
+}
+
+.year-list-container > * + * {
+  margin-top: 1rem;
 }
 
 .list-toggle {

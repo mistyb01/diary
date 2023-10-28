@@ -1,5 +1,17 @@
 @use '../helpers/variables';
 
+.side-panel-container {
+    > * + * {
+        margin-top: 2rem;
+    }
+}
+
+.year-list-container {
+    > * + * {
+        margin-top: 1rem;
+    }
+}
+
 .list-toggle {
     width: 100%;
     display: flex;
