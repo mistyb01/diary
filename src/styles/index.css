@@ -45,6 +45,10 @@ body {
   list-style: none;
 }
 
+.side-panel-container {
+  height: 100vh;
+  overflow-y: auto;
+}
 .side-panel-container h1 {
   margin-bottom: 1rem;
 }

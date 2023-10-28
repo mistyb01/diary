@@ -105,6 +105,12 @@ const YearListItem = () => {
                       dayjs(entry.creation_timestamp).format("MMMM") ===
                       monthName
                   )
+                  // rudimentary sort for ascending days
+                  .sort(
+                    (a, b) =>
+                      parseInt(dayjs(a.creation_timestamp).format("D")) -
+                      parseInt(dayjs(b.creation_timestamp).format("D"))
+                  )
                   .map((entry) => (
                     <EntryListItem>
                       <span className="label-bold">
