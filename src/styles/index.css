@@ -12,24 +12,122 @@ a {
   color: inherit;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  color: inherit;
+}
+
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #645368;
 }
 
-.h1 {
+.heading-top {
+  font-size: 1.75rem;
   color: #0A0310;
 }
 
+.heading-label {
+  font-size: 0.875rem;
+  color: #FF4F79;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.label-bold {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 .nav-container {
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  right: 0px;
   padding: 1rem;
 }
 .nav-container ul {
   display: flex;
   gap: 2rem;
   list-style: none;
+}
+
+.side-panel-container {
+  height: 100vh;
+  overflow-y: auto;
+  scrollbar-color: #ecd7dd #F9F2F2;
+}
+.side-panel-container h1 {
+  margin-bottom: 1rem;
+}
+.side-panel-container > * + * {
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .side-panel-container {
+    height: auto;
+  }
+}
+.year-list-container > * + * {
+  margin-top: 1rem;
+}
+
+.list-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-toggle--large {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.list-side-panel {
+  list-style: none;
+}
+.list-side-panel li {
+  padding: 0.5rem 0rem 0.5rem 1rem;
+}
+
+.list-side-panel--entry li {
+  transition: 0.25s ease-in-out;
+}
+.list-side-panel--entry li:first-child {
+  margin-top: 0.5rem;
+}
+.list-side-panel--entry li:nth-child(even) {
+  background-color: #F9F2F2;
+}
+.list-side-panel--entry li:hover {
+  color: #FF4F79;
+  opacity: 0.75;
+}
+
+.entry-list-item button {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.entry-list-item--selected {
+  color: #FF4F79;
+  border-left: 5px solid #FF4F79;
+}
+
+.radios {
+  padding: 0rem 1.5rem;
+}
+.radios > div + div {
+  margin-top: 1rem;
+}
+
+.radio-option input {
+  margin-right: 0.5rem;
 }
 
 .layout-grid-container {
@@ -59,6 +157,4 @@ body {
     grid-column-start: 1;
     grid-column-end: 12;
   }
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

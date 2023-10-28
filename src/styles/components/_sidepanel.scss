@@ -1,0 +1,81 @@
+@use '../helpers/variables';
+
+.side-panel-container {
+    height: 100vh;
+    overflow-y: auto;
+    scrollbar-color: variables.$c-darker-offwhite variables.$c-offwhite;
+    // scrollbar-width: thin;
+    // spacing
+    h1 { margin-bottom: 1rem; }
+    > * + * {
+        margin-top: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .side-panel-container {
+        height: auto;
+    }
+}
+
+.year-list-container {
+    > * + * {
+        margin-top: 1rem;
+    }
+}
+
+.list-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-toggle--large {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.list-side-panel {
+    list-style: none;
+    li {
+        padding: 0.5rem 0rem 0.5rem 1rem;
+    }
+}
+
+.list-side-panel--entry {
+    li { transition: 0.25s ease-in-out; }
+    li:first-child { margin-top: 0.5rem; }
+    li:nth-child(even) {
+        background-color: variables.$c-offwhite;
+    }
+    li:hover {
+        color: variables.$c-hotpink;
+        opacity: 0.75;
+    }
+}
+
+.entry-list-item button {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.entry-list-item--selected {
+    color: variables.$c-hotpink;
+    border-left: 5px solid variables.$c-hotpink;
+}
+
+.reading-mode-toggle-container {
+}
+
+.radios {
+    padding: 0rem 1.5rem;
+    > div + div { margin-top: 1rem; }
+}
+
+.radio-option {
+    input { margin-right: 0.5rem; }       
+}
