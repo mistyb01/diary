@@ -169,7 +169,7 @@ const YearListItem = () => {
         <ul className="list-side-panel">
           {getMonthArr().map((monthName) => {
             return (
-              <MonthListItem month={monthName}>
+              <MonthListItem key={monthName} month={monthName}>
                 {mockData
                   .filter(
                     (entry) =>
@@ -184,6 +184,7 @@ const YearListItem = () => {
                   )
                   .map((entry) => (
                     <EntryListItem
+                      key={entry.id}
                       isSelected={entry.id === selectedEntry}
                       updateIsSelected={() => setSelectedEntry(entry.id)}
                     >
