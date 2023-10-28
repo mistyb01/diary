@@ -38,6 +38,7 @@
 }
 
 .list-side-panel--entry {
+    li:first-child { margin-top: 0.5rem; }
     li:nth-child(even) {
         background-color: variables.$c-offwhite;
     }
