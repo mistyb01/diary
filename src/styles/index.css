@@ -32,6 +32,13 @@ body {
   list-style: none;
 }
 
+.list-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .layout-grid-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);

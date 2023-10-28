@@ -1,6 +1,9 @@
 import EntryListItem from "./EntryListItem/EntryListItem";
 import MonthListItem from "./MonthListItem/MonthListItem";
 import * as dayjs from "dayjs";
+import { FiChevronDown } from "react-icons/fi";
+import { FiChevronRight } from "react-icons/fi";
+
 import { useState } from "react";
 
 const YearListItem = () => {
@@ -84,7 +87,13 @@ const YearListItem = () => {
 
   return (
     <>
-      <h2 onClick={() => setShowChildren(!showChildren)}>2023</h2>
+      <div
+        className="list-toggle"
+        onClick={() => setShowChildren(!showChildren)}
+      >
+        <h2>2023</h2>
+        {showChildren ? <FiChevronDown /> : <FiChevronRight />}
+      </div>
       {showChildren && (
         <>
           {getMonthArr().map((monthName) => {
