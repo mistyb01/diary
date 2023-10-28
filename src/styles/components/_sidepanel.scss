@@ -12,6 +12,12 @@
     }
 }
 
+@media (max-width: 768px) {
+    .side-panel-container {
+        height: auto;
+    }
+}
+
 .year-list-container {
     > * + * {
         margin-top: 1rem;
