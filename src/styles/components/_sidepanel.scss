@@ -1,8 +1,10 @@
 @use '../helpers/variables';
 
 .side-panel-container {
+    height: 100vh;
+    overflow-y: auto;
+    // spacing
     h1 { margin-bottom: 1rem; }
-
     > * + * {
         margin-top: 2.5rem;
     }
