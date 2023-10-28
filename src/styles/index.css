@@ -12,6 +12,13 @@ a {
   color: inherit;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  color: inherit;
+}
+
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #645368;
@@ -85,7 +92,7 @@ body {
   background-color: #F9F2F2;
 }
 
-.entry-list-item {
+.entry-list-item button {
   display: flex;
   gap: 1rem;
 }

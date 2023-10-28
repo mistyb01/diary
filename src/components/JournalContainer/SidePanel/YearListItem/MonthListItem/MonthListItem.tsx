@@ -14,13 +14,13 @@ const MonthListItem = ({
 
   return (
     <li>
-      <div
+      <button
         className="list-toggle"
         onClick={() => setShowChildren(!showChildren)}
       >
         <h3 className="label-bold">{month}</h3>
         {showChildren ? <FiChevronDown /> : <FiChevronRight />}
-      </div>
+      </button>
       {showChildren && (
         <ul className="list-side-panel list-side-panel--entry">{children}</ul>
       )}

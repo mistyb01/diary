@@ -87,13 +87,13 @@ const YearListItem = () => {
 
   return (
     <div className="year-list-container">
-      <div
+      <button
         className="list-toggle--large"
         onClick={() => setShowChildren(!showChildren)}
       >
         <h2 className="heading-top">2023</h2>
         {showChildren ? <FiChevronDown /> : <FiChevronRight />}
-      </div>
+      </button>
       {showChildren && (
         <ul className="list-side-panel">
           {getMonthArr().map((monthName) => {
