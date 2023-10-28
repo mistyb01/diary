@@ -1,7 +1,9 @@
 import YearListItem from "./YearListItem";
+
 import { useState } from "react";
 import { FiChevronsLeft } from "react-icons/fi";
 import { FiChevronsRight } from "react-icons/fi";
+import ReadingModeToggle from "./ReadingModeToggle";
 
 const SidePanel = () => {
   const [showPanel, setShowPanel] = useState(true);
@@ -22,6 +24,7 @@ const SidePanel = () => {
           {showPanel && <YearListItem />}
         </>
       )}
+      <ReadingModeToggle />
     </section>
   );
 };
