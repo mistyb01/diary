@@ -1,4 +1,5 @@
 import MonthListItem from "./MonthListItem/MonthListItem";
+import * as dayjs from "dayjs";
 
 const YearListItem = () => {
   const mockData = [
@@ -6,14 +7,14 @@ const YearListItem = () => {
       userID: 1,
       title: "First Entry",
       text_body: "This is my first diary entry. I had a great day today.",
-      creation_timestamp: "2023-10-27T09:00:00",
+      creation_timestamp: "2023-09-27T09:00:00",
     },
     {
       userID: 2,
       title: "Memorable Hike",
       text_body:
         "I went on a memorable hike today. The scenery was breathtaking.",
-      creation_timestamp: "2023-10-26T17:30:00",
+      creation_timestamp: "2023-09-26T17:30:00",
     },
     {
       userID: 3,
@@ -68,10 +69,21 @@ const YearListItem = () => {
     },
   ];
 
+  function getMonthArr() {
+    const monthArr: number[] = [];
+    mockData.forEach((entry) => {
+      const month = dayjs(entry.creation_timestamp).month();
+      if (!monthArr.includes(month)) monthArr.push(month);
+    });
+    return monthArr;
+  }
+
   return (
     <>
       <h2>2023</h2>
-      <MonthListItem month={0} />
+      {getMonthArr().map((monthNumber) => {
+        return <MonthListItem month={monthNumber} />;
+      })}
     </>
   );
 };
