@@ -3,6 +3,8 @@
 .side-panel-container {
     height: 100vh;
     overflow-y: auto;
+    scrollbar-color: variables.$c-darker-offwhite variables.$c-offwhite;
+    // scrollbar-width: thin;
     // spacing
     h1 { margin-bottom: 1rem; }
     > * + * {
@@ -52,6 +54,7 @@
 .entry-list-item button {
     display: flex;
     gap: 1rem;
+    align-items: center;
 }
 
 .entry-list-item--selected {

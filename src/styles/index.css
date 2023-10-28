@@ -55,6 +55,7 @@ body {
 .side-panel-container {
   height: 100vh;
   overflow-y: auto;
+  scrollbar-color: #ecd7dd #F9F2F2;
 }
 .side-panel-container h1 {
   margin-bottom: 1rem;
@@ -105,6 +106,7 @@ body {
 .entry-list-item button {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 .entry-list-item--selected {
