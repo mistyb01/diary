@@ -38,3 +38,8 @@
         background-color: variables.$c-offwhite;
     }
 }
+
+.entry-list-item {
+    display: flex;
+    gap: 1rem;
+}

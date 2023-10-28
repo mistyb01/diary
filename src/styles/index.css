@@ -35,8 +35,8 @@ body {
 }
 
 .nav-container {
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  right: 0px;
   padding: 1rem;
 }
 .nav-container ul {
@@ -76,6 +76,11 @@ body {
 
 .list-side-panel--entry li:nth-child(even) {
   background-color: #F9F2F2;
+}
+
+.entry-list-item {
+  display: flex;
+  gap: 1rem;
 }
 
 .layout-grid-container {

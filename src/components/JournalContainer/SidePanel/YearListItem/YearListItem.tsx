@@ -106,7 +106,12 @@ const YearListItem = () => {
                       monthName
                   )
                   .map((entry) => (
-                    <EntryListItem>{entry.title}</EntryListItem>
+                    <EntryListItem>
+                      <span className="label-bold">
+                        {dayjs(entry.creation_timestamp).format("D")}
+                      </span>
+                      {entry.title}
+                    </EntryListItem>
                   ))}
               </MonthListItem>
             );
