@@ -70,9 +70,9 @@ const YearListItem = () => {
   ];
 
   function getMonthArr() {
-    const monthArr: number[] = [];
+    const monthArr: string[] = [];
     mockData.forEach((entry) => {
-      const month = dayjs(entry.creation_timestamp).month();
+      const month = dayjs(entry.creation_timestamp).format("MMMM");
       if (!monthArr.includes(month)) monthArr.push(month);
     });
     return monthArr;

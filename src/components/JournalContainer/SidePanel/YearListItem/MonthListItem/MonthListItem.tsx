@@ -1,4 +1,4 @@
-const MonthListItem = ({ month }: { month: number }) => {
+const MonthListItem = ({ month }: { month: string }) => {
   return (
     <>
       <h3>{month}</h3>
