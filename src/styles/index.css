@@ -97,6 +97,10 @@ body {
   gap: 1rem;
 }
 
+.entry-list-item--selected {
+  color: #FF4F79;
+}
+
 .radios {
   padding: 0rem 1.5rem;
 }

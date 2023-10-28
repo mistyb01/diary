@@ -48,6 +48,10 @@
     gap: 1rem;
 }
 
+.entry-list-item--selected {
+    color: variables.$c-hotpink;
+}
+
 .reading-mode-toggle-container {
 }
 

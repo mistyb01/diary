@@ -1,8 +1,16 @@
 import { ReactNode } from "react";
 
-const EntryListItem = ({ children }: { children: ReactNode }) => {
+const EntryListItem = ({
+  isSelected,
+  children,
+}: {
+  isSelected: boolean;
+  children: ReactNode;
+}) => {
   return (
-    <li className="entry-list-item">
+    <li
+      className={`entry-list-item ${isSelected && "entry-list-item--selected"}`}
+    >
       <button>{children}</button>
     </li>
   );
