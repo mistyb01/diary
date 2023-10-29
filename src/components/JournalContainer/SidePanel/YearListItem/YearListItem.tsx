@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const YearListItem = () => {
   const [showChildren, setShowChildren] = useState(true);
-  const [selectedEntry, setSelectedEntry] = useState<Number | null>(null);
+  const [selectedEntry, setSelectedEntry] = useState<number | null>(null);
 
   const mockData = [
     {
