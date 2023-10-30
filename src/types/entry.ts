@@ -1,4 +1,4 @@
-interface entry {
+interface Entry {
     id: number,
     userID: number,
     title: string,
@@ -7,4 +7,4 @@ interface entry {
 }
 
 
-export default entry;
+export default Entry;
