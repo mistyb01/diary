@@ -4,8 +4,19 @@ import { useState } from "react";
 import { FiChevronsLeft } from "react-icons/fi";
 import { FiChevronsRight } from "react-icons/fi";
 import ReadingModeToggle from "./ReadingModeToggle";
+import Entry from "../../../types/entry";
 
-const SidePanel = () => {
+interface SidePanelProps {
+  entries: Entry[];
+  selectedEntry: number | null;
+  updateSelectedEntry: (value: React.SetStateAction<number | null>) => void;
+}
+
+const SidePanel = ({
+  entries,
+  selectedEntry,
+  updateSelectedEntry,
+}: SidePanelProps) => {
   const [showPanel, setShowPanel] = useState(true);
 
   return (
@@ -22,7 +33,11 @@ const SidePanel = () => {
           <div>
             <h1 className="heading-label">entry list</h1>
             {/* TODO: items are mapped to entry data */}
-            <YearListItem />
+            <YearListItem
+              entries={entries}
+              selectedEntry={selectedEntry}
+              updateSelectedEntry={updateSelectedEntry}
+            />
           </div>
         </>
       )}
