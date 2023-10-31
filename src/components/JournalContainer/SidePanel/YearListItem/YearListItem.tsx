@@ -5,22 +5,13 @@ import { FiChevronDown } from "react-icons/fi";
 import { FiChevronRight } from "react-icons/fi";
 
 // utility file where API calls for entries will be kept
-import { entryService } from "../../../../api/EntryService";
 import Entry from "../../../../types/entry";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-const YearListItem = () => {
+const YearListItem = ({ entries }: { entries: Entry[] }) => {
   const [showChildren, setShowChildren] = useState(true);
   const [selectedEntry, setSelectedEntry] = useState<number | null>(null);
-  const [entries, setEntries] = useState<Entry[]>([]);
-
-  useEffect(() => {
-    entryService
-      .getEntries()
-      .then((entries) => setEntries(entries))
-      .catch((error) => console.log("error:", error));
-  }, []);
 
   function getMonthArr() {
     const monthArr: string[] = [];
