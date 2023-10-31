@@ -23,7 +23,7 @@ const JournalContainer = () => {
         selectedEntry={selectedEntry}
         updateSelectedEntry={(value) => setSelectedEntry(value)}
       />
-      <EntryContainer />
+      <EntryContainer entries={entries} selectedEntry={selectedEntry} />
     </>
   );
 };
