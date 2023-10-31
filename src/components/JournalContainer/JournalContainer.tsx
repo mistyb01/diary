@@ -7,6 +7,7 @@ import Entry from "../../types/entry";
 
 const JournalContainer = () => {
   const [entries, setEntries] = useState<Entry[]>([]);
+  const [selectedEntry, setSelectedEntry] = useState<number | null>(null);
 
   useEffect(() => {
     entryService
@@ -17,7 +18,11 @@ const JournalContainer = () => {
 
   return (
     <>
-      <SidePanel entries={entries} />
+      <SidePanel
+        entries={entries}
+        selectedEntry={selectedEntry}
+        updateSelectedEntry={(value) => setSelectedEntry(value)}
+      />
       <EntryContainer />
     </>
   );

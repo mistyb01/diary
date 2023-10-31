@@ -4,14 +4,21 @@ import * as dayjs from "dayjs";
 import { FiChevronDown } from "react-icons/fi";
 import { FiChevronRight } from "react-icons/fi";
 
-// utility file where API calls for entries will be kept
 import Entry from "../../../../types/entry";
 
 import { useState } from "react";
 
-const YearListItem = ({ entries }: { entries: Entry[] }) => {
+const YearListItem = ({
+  entries,
+  selectedEntry,
+  updateSelectedEntry,
+}: {
+  entries: Entry[];
+  selectedEntry: number | null;
+  updateSelectedEntry: (value: React.SetStateAction<number | null>) => void;
+}) => {
   const [showChildren, setShowChildren] = useState(true);
-  const [selectedEntry, setSelectedEntry] = useState<number | null>(null);
+  // const [selectedEntry, setSelectedEntry] = useState<number | null>(null);
 
   function getMonthArr() {
     const monthArr: string[] = [];
@@ -52,7 +59,7 @@ const YearListItem = ({ entries }: { entries: Entry[] }) => {
                     <EntryListItem
                       key={entry.id}
                       isSelected={entry.id === selectedEntry}
-                      updateIsSelected={() => setSelectedEntry(entry.id)}
+                      updateIsSelected={() => updateSelectedEntry(entry.id)}
                     >
                       <span className="label-bold">
                         {dayjs(entry.creation_timestamp).format("D")}
