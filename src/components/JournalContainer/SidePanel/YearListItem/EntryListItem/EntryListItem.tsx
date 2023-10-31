@@ -1,14 +1,16 @@
 import { MouseEventHandler, ReactNode } from "react";
 
+interface EntryListItemProps {
+  isSelected: boolean;
+  updateIsSelected: MouseEventHandler<HTMLLIElement>;
+  children: ReactNode;
+}
+
 const EntryListItem = ({
   isSelected,
   updateIsSelected,
   children,
-}: {
-  isSelected: boolean;
-  updateIsSelected: MouseEventHandler<HTMLLIElement>;
-  children: ReactNode;
-}) => {
+}: EntryListItemProps) => {
   return (
     <li
       className={`entry-list-item ${isSelected && "entry-list-item--selected"}`}

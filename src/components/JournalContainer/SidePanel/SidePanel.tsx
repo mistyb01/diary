@@ -6,15 +6,17 @@ import { FiChevronsRight } from "react-icons/fi";
 import ReadingModeToggle from "./ReadingModeToggle";
 import Entry from "../../../types/entry";
 
+interface SidePanelProps {
+  entries: Entry[];
+  selectedEntry: number | null;
+  updateSelectedEntry: (value: React.SetStateAction<number | null>) => void;
+}
+
 const SidePanel = ({
   entries,
   selectedEntry,
   updateSelectedEntry,
-}: {
-  entries: Entry[];
-  selectedEntry: number | null;
-  updateSelectedEntry: (value: React.SetStateAction<number | null>) => void;
-}) => {
+}: SidePanelProps) => {
   const [showPanel, setShowPanel] = useState(true);
 
   return (

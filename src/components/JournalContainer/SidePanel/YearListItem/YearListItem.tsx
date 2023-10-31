@@ -8,15 +8,17 @@ import Entry from "../../../../types/entry";
 
 import { useState } from "react";
 
+interface YearListItemProps {
+  entries: Entry[];
+  selectedEntry: number | null;
+  updateSelectedEntry: (value: React.SetStateAction<number | null>) => void;
+}
+
 const YearListItem = ({
   entries,
   selectedEntry,
   updateSelectedEntry,
-}: {
-  entries: Entry[];
-  selectedEntry: number | null;
-  updateSelectedEntry: (value: React.SetStateAction<number | null>) => void;
-}) => {
+}: YearListItemProps) => {
   const [showChildren, setShowChildren] = useState(true);
   // const [selectedEntry, setSelectedEntry] = useState<number | null>(null);
 

@@ -1,12 +1,11 @@
 import Entry from "../../../types/entry";
 
-const EntryContainer = ({
-  entries,
-  selectedEntry,
-}: {
+interface EntryContainerProps {
   entries: Entry[];
   selectedEntry: number | null;
-}) => {
+}
+
+const EntryContainer = ({ entries, selectedEntry }: EntryContainerProps) => {
   let entryToShow = null;
   if (selectedEntry) {
     entryToShow = entries.find((entry) => entry.id === selectedEntry);
