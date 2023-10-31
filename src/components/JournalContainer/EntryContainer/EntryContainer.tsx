@@ -6,7 +6,7 @@ interface EntryContainerProps {
 }
 
 const EntryContainer = ({ entries, selectedEntry }: EntryContainerProps) => {
-  let entryToShow = null;
+  let entryToShow: Entry | undefined = undefined;
   if (selectedEntry) {
     entryToShow = entries.find((entry) => entry.id === selectedEntry);
   }
