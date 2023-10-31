@@ -17,6 +17,7 @@ button {
   background-color: transparent;
   font-family: inherit;
   color: inherit;
+  cursor: pointer;
 }
 
 body {
@@ -128,6 +129,61 @@ body {
 
 .radio-option input {
   margin-right: 0.5rem;
+}
+
+.entry-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  margin: 2.5rem;
+  width: 100%;
+}
+
+.heading-entry {
+  font-size: 2rem;
+}
+
+.entry-body {
+  line-height: 160%;
+  font-size: 1rem;
+}
+
+.next-prev-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.metadata-container {
+  color: #887187;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: #F9F2F2;
+  border-radius: 4px;
+}
+
+.metadata-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.metadata-items {
+  display: flex;
+  gap: 2rem;
+}
+
+.icon-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.edit-entry-btn {
+  border: 1px solid #887187;
+  padding: 0.25rem 0.5rem;
 }
 
 .layout-grid-container {

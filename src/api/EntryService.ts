@@ -1,142 +1,42 @@
 import Entry from "../types/entry";
 
 const mockData : Entry[] = [
-    {
-      id: 1,
-      userID: 1,
-      title: "First Entry",
-      text_body: "This is my first diary entry. I had a great day today.",
-      creation_timestamp: "2023-10-27T09:00:00",
-    },
-    {
-      id: 2,
-      userID: 2,
-      title: "Memorable Hike",
-      text_body:
-        "I went on a memorable hike today. The scenery was breathtaking.",
-      creation_timestamp: "2023-10-26T17:30:00",
-    },
-    {
-      id: 3,
-      userID: 3,
-      title: "Family Dinner",
-      text_body: "Had a wonderful family dinner at my favorite restaurant.",
-      creation_timestamp: "2023-10-25T20:15:00",
-    },
-    {
-      id: 4,
-      userID: 4,
-      title: "Productive Workday",
-      text_body:
-        "Today was a very productive day at work. I accomplished a lot.",
-      creation_timestamp: "2023-10-24T16:45:00",
-    },
-    {
-      id: 5,
-      userID: 5,
-      title: "Movie Night",
-      text_body: "Spent the evening watching a great movie with friends.",
-      creation_timestamp: "2023-10-23T21:00:00",
-    },
-    {
-      id: 6,
-      userID: 1,
-      title: "Weekend Getaway",
-      text_body: "Had a relaxing weekend getaway by the beach.",
-      creation_timestamp: "2023-10-22T14:20:00",
-    },
-    {
-      id: 7,
-      userID: 2,
-      title: "Gardening Day",
-      text_body: "Spent the day gardening and planting new flowers.",
-      creation_timestamp: "2023-10-21T10:30:00",
-    },
-    {
-      id: 8,
-      userID: 3,
-      title: "Birthday Celebration",
-      text_body:
-        "Celebrated my birthday with friends and family. It was a blast!",
-      creation_timestamp: "2023-10-20T18:00:00",
-    },
-    {
-      id: 9,
-      userID: 4,
-      title: "Rainy Day Reading",
-      text_body: "Enjoyed a cozy day indoors, reading my favorite book.",
-      creation_timestamp: "2023-10-19T12:45:00",
-    },
-    {
-      id: 10,
-      userID: 5,
-      title: "New Recipe Experiment",
-      text_body:
-        "Tried a new recipe for dinner tonight. It turned out delicious!",
-      creation_timestamp: "2023-10-18T19:30:00",
-    },
-    {
-      id: 11,
-      userID: 1,
-      title: "Autumn Colors",
-      text_body:
-        "Took a walk in the park and admired the beautiful autumn colors.",
-      creation_timestamp: "2023-11-15T14:00:00",
-    },
-    {
-      id: 12,
-      userID: 2,
-      title: "Thanksgiving Feast",
-      text_body:
-        "Celebrated Thanksgiving with a delicious feast and gratitude.",
-      creation_timestamp: "2023-11-25T19:30:00",
-    },
-    {
-      id: 13,
-      userID: 3,
-      title: "Black Friday Shopping",
-      text_body: "Went shopping on Black Friday and got some great deals.",
-      creation_timestamp: "2023-11-26T10:15:00",
-    },
-    {
-      id: 14,
-      userID: 4,
-      title: "First Snowfall",
-      text_body:
-        "Woke up to the first snowfall of the season. It's so magical!",
-      creation_timestamp: "2023-12-03T08:45:00",
-    },
-    {
-      id: 15,
-      userID: 5,
-      title: "Holiday Decorations",
-      text_body: "Spent the day decorating the house for the holiday season.",
-      creation_timestamp: "2023-12-10T16:00:00",
-    },
-    {
-      id: 16,
-      userID: 1,
-      title: "Winter Wonderland",
-      text_body:
-        "Visited a winter wonderland theme park with friends. So much fun!",
-      creation_timestamp: "2023-12-16T14:30:00",
-    },
-    {
-      id: 17,
-      userID: 2,
-      title: "Christmas Eve Celebration",
-      text_body:
-        "Celebrated Christmas Eve with family, exchanging gifts and love.",
-      creation_timestamp: "2023-12-24T20:00:00",
-    },
-    {
-      id: 18,
-      userID: 3,
-      title: "New Year's Resolutions",
-      text_body: "Reflecting on the year and setting New Year's resolutions.",
-      creation_timestamp: "2023-12-31T23:55:00",
-    },
-];
+  {
+    "id": 1,
+    "userID": 1,
+    "title": "A Day on the Research Vessel",
+    "text_body": "Today, I had the privilege of embarking on a research expedition aboard our research vessel. We set sail early in the morning, heading to the open waters of the Pacific Ocean. As a marine biologist, these expeditions are the highlight of my career. Our mission was to study the migration patterns of humpback whales. For hours, we scanned the horizon, searching for telltale signs of these majestic creatures. Finally, our patience paid off as we spotted a group of humpbacks breaching and slapping their tails on the water's surface. It was a breathtaking sight. We carefully approached the whales, ensuring that we didn't disturb their natural behavior. We collected data on their behaviors, took photographs, and recorded underwater vocalizations. These magnificent creatures never cease to amaze me with their intelligence and grace. Throughout the day, we also observed various seabirds, dolphins, and even a rare sighting of a leatherback sea turtle. Our research contributes to the conservation efforts and understanding of these marine ecosystems, and I feel privileged to be a part of it.",
+    "creation_timestamp": "2023-10-27T09:00:00"
+  },
+  {
+    "id": 2,
+    "userID": 2,
+    "title": "Coral Reef Expedition",
+    "text_body": "Today, I had the opportunity to explore a vibrant coral reef ecosystem. As a marine biologist, studying these underwater wonderlands is a dream come true. The reef we visited was teeming with life, and I couldn't wait to document and analyze the diverse species that call it home. My team and I donned our scuba gear and descended into the crystal-clear waters. The kaleidoscope of colors and shapes that greeted us was simply astounding. We swam among schools of tropical fish, spotted intricate coral formations, and even encountered a gentle manta ray gliding gracefully through the water. Our research involved documenting the health of the coral and monitoring for any signs of coral bleaching, a threat to these delicate ecosystems. We carefully collected samples and conducted underwater surveys to track changes over time. The highlight of the day was our discovery of a hidden cave within the reef. Inside, we found a stunning array of sea sponges, sea anemones, and tiny seahorses. It was a reminder of the hidden treasures that our oceans hold, and the importance of preserving these ecosystems for future generations. As the day drew to a close, we resurfaced with a sense of awe and responsibility. Our work as marine biologists is vital to understanding and conserving these fragile environments.",
+    "creation_timestamp": "2023-11-15T14:00:00"
+  },
+  {
+    "id": 3,
+    "userID": 3,
+    "title": "Tracking Sea Turtle Nesting",
+    "text_body": "Today marked a crucial phase in our ongoing sea turtle conservation project. I had the privilege of monitoring sea turtle nesting activity on a remote beach. The preservation of these magnificent creatures is at the heart of our research, and every nesting season is a critical part of that effort. Under the moonlight, we patrolled the beach in search of nesting female sea turtles. The soft rustling of their fins on the sand was a mesmerizing sight. Once we identified a nesting turtle, we observed her from a distance to avoid causing stress. We collected valuable data, including measurements, markings, and nest location coordinates. It's always a moving experience to witness these ancient creatures returning to their ancestral nesting grounds. The cycle of life continues as the turtles dig a hole in the sand and deposit their precious eggs. We carefully marked the nest, recording the number of eggs laid, and then ensured it was protected from potential threats. Our work doesn't end with the nesting season. We also track the hatchlings when they emerge and make their way to the sea. Protecting these young turtles during this vulnerable stage is a vital part of our conservation efforts. As a marine biologist, I feel a deep connection to these sea turtles, and I'm dedicated to ensuring their survival in the face of the many challenges they face.",
+    "creation_timestamp": "2023-12-05T11:45:00"
+  },
+  {
+    "id": 4,
+    "userID": 1,
+    "title": "Deep-Sea Exploration",
+    "text_body": "Venturing into the depths of the ocean is always a thrilling experience. Our deep-sea exploration mission took us to the abyssal plains, where sunlight barely penetrates and unique, mysterious creatures thrive in the darkness. As a marine biologist, I was eager to discover what secrets the deep sea held.\n\nOur submersible descended into the inky depths, and as we reached the seafloor, a whole new world came into view. We observed bioluminescent organisms, such as anglerfish and giant squid, which illuminated the darkness with their otherworldly glow. These adaptations to the extreme environment never cease to amaze me.\n\nWe collected samples of deep-sea creatures and sediment to study later. Each discovery added to our understanding of the intricate web of life in this remote habitat. The pressure at these depths is immense, and the darkness can be disorienting, but our training and technology kept us safe and allowed us to document our findings.\n\nOur research will contribute to the conservation of these unique ecosystems and the protection of their fragile balance. The deep sea remains a frontier of exploration, and I feel fortunate to be part of the ongoing quest to unlock its secrets.",
+    "creation_timestamp": "2023-11-10T16:30:00"
+  },
+  {
+    "id": 5,
+    "userID": 2,
+    "title": "Shark Tagging Expedition",
+    "text_body": "Today, we embarked on a shark tagging expedition in the open waters. Sharks are apex predators, and understanding their behavior and migratory patterns is essential for marine conservation efforts. We were equipped with specialized tagging equipment and a deep respect for these powerful creatures.\n\nAs the sun rose, we located a group of sharks near a known aggregation site. With practiced precision, we approached the sharks, carefully avoiding any actions that might stress them. Using specialized equipment, we tagged several individuals, recording their size, species, and behavior.\n\nThe experience was both thrilling and humbling. Observing these magnificent creatures up close revealed the grace and power they possess. It's a reminder of the critical role sharks play in maintaining the health of our oceans.\n\nOur data will contribute to a better understanding of shark populations and their movements, which in turn informs conservation policies and helps protect these vital species. As a marine biologist, these moments of direct interaction with the subjects of our study are incredibly rewarding and reinforce my commitment to marine conservation.",
+    "creation_timestamp": "2023-12-08T14:20:00"
+  },
+]
 
 class EntryService {
     async getEntries(): Promise<Entry[]> {

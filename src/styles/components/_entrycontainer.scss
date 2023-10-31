@@ -1,0 +1,57 @@
+@use '../helpers/variables';
+
+.entry-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    margin: 2.5rem;
+    width: 100%;
+}
+
+.heading-entry {
+    font-size: 2rem;
+}
+
+.entry-body {
+    line-height: 160%;
+    font-size: 1rem;
+    
+}
+
+.next-prev-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.metadata-container {
+    color: variables.$c-purple-lighter;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: variables.$c-offwhite;
+    border-radius: 4px;
+}
+
+.metadata-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.metadata-items {
+    display: flex;
+    gap: 2rem;
+}
+
+.icon-item {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.edit-entry-btn {
+    border: 1px solid variables.$c-purple-lighter;
+    padding: 0.25rem 0.5rem;
+}
