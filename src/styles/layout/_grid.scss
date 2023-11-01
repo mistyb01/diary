@@ -1,6 +1,15 @@
+.overall-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .layout-grid-container {
     display: grid;
-    grid-template-columns: [first] 20vw [line2] auto [line3] 20vw [end];
+    position: relative;
+    width: min(100%, 1600px);
+    // min(300px, 20vw) will usually be 20vw since most screen sizes, 20vw is less than 300px.
+    // but for the really large sizes, when 20vw is a large width; the side columns get capped at 300px.
+    grid-template-columns: [first] min(300px, 20vw) [line2] auto [line3] min(250px, 20vw) [end];
     > * {
         padding: 2rem 1.5rem;
     }
