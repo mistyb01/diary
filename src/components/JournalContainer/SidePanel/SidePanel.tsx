@@ -29,22 +29,20 @@ const SidePanel = ({
         {showPanel ? <CgClose /> : <CgMenuGridR />}
       </div>
 
-      <div
-        className={
-          showPanel ? "side-panel-content show-panel" : "side-panel-content"
-        }
-      >
-        <ReadingModeToggle />
-        <div>
-          <h1 className="heading-label">entry list</h1>
-          {/* TODO: items are mapped to entry data */}
-          <YearListItem
-            entries={entries}
-            selectedEntry={selectedEntry}
-            updateSelectedEntry={updateSelectedEntry}
-          />
+      {showPanel && (
+        <div className="side-panel-content">
+          <ReadingModeToggle />
+          <div>
+            <h1 className="heading-label">entry list</h1>
+            {/* TODO: items are mapped to entry data */}
+            <YearListItem
+              entries={entries}
+              selectedEntry={selectedEntry}
+              updateSelectedEntry={updateSelectedEntry}
+            />
+          </div>
         </div>
-      </div>
+      )}
     </section>
   );
 };

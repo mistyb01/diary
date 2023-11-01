@@ -67,18 +67,12 @@ body {
 
 .side-panel-content {
   margin-top: 2.5rem;
-  transition: 0.2s ease-in-out;
-  opacity: 0;
 }
 .side-panel-content h1 {
   margin-bottom: 1rem;
 }
 .side-panel-content > * + * {
   margin-top: 2.5rem;
-}
-
-.show-panel {
-  opacity: 1;
 }
 
 @media (max-width: 1000px) {
