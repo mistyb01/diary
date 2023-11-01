@@ -23,7 +23,7 @@ const SidePanel = ({
   const parent = useRef(null);
 
   useEffect(() => {
-    parent.current && autoAnimate(parent.current);
+    parent.current && autoAnimate(parent.current, { duration: 175 });
   }, [parent]);
 
   return (
