@@ -9,12 +9,40 @@ import { FiCloudSnow } from "react-icons/fi";
 interface EntryContainerProps {
   entries: Entry[];
   selectedEntry: number | null;
+  updateSelectedEntry: (value: React.SetStateAction<number | null>) => void;
 }
 
-const EntryContainer = ({ entries, selectedEntry }: EntryContainerProps) => {
+const EntryContainer = ({
+  entries,
+  selectedEntry,
+  updateSelectedEntry,
+}: EntryContainerProps) => {
   let entryToShow: Entry | undefined = undefined;
+  let indexOfSelectedEntry: number | undefined = undefined;
+  let isNext: boolean = false;
+
   if (selectedEntry) {
     entryToShow = entries.find((entry) => entry.id === selectedEntry);
+    if (entryToShow) {
+      indexOfSelectedEntry = entries.indexOf(entryToShow);
+      if (
+        indexOfSelectedEntry !== undefined &&
+        indexOfSelectedEntry + 1 < entries.length
+      ) {
+        isNext = true;
+      }
+    }
+  }
+
+  function nextEntry() {
+    if (
+      indexOfSelectedEntry !== undefined &&
+      indexOfSelectedEntry + 1 < entries.length
+    ) {
+      let newIdx = (indexOfSelectedEntry += 1);
+      const newId = entries[newIdx].id;
+      updateSelectedEntry(newId);
+    }
   }
 
   return (
@@ -23,7 +51,7 @@ const EntryContainer = ({ entries, selectedEntry }: EntryContainerProps) => {
         <div className="entry-container">
           <div className="next-prev-container">
             <button>⬅ prev</button>
-            <button>next ➡</button>
+            {isNext && <button onClick={nextEntry}>next ➡</button>}
           </div>
           <div className="top-row">
             <div className="metadata-container">
