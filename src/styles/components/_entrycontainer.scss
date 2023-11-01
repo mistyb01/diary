@@ -3,7 +3,7 @@
 .entry-container {
     display: flex;
     flex-direction: column;
-    gap: 2.25rem;
+    gap: 1.5rem;
     width: 100%;
 }
 
@@ -25,12 +25,13 @@
 
 .metadata-container {
     color: variables.$c-purple-lighter;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 0.9rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     padding: 1rem;
-    background-color: variables.$c-offwhite;
+    // background-color: variables.$c-offwhite;
     border-radius: 4px;
 }
 

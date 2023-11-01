@@ -25,8 +25,6 @@ const EntryContainer = ({ entries, selectedEntry }: EntryContainerProps) => {
             <button>⬅ prev</button>
             <button>next ➡</button>
           </div>
-          <h1 className="heading-entry">{entryToShow.title}</h1>
-
           <div className="metadata-container">
             <div className="metadata-row">
               <div className="metadata-items">
@@ -52,6 +50,7 @@ const EntryContainer = ({ entries, selectedEntry }: EntryContainerProps) => {
               </span>
             </div>
           </div>
+          <h1 className="heading-entry">{entryToShow.title}</h1>
           <p className="entry-body">{entryToShow.text_body}</p>
         </div>
       )}
