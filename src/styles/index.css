@@ -145,12 +145,13 @@ body {
 .entry-container {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
   width: 100%;
 }
 
 .heading-entry {
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .entry-body {
@@ -164,6 +165,14 @@ body {
   justify-content: space-between;
 }
 
+.top-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  gap: 2rem;
+}
+
 .metadata-container {
   color: #887187;
   font-family: "Courier New", Courier, monospace;
@@ -171,8 +180,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 1rem;
-  border-radius: 4px;
 }
 
 .metadata-row {
@@ -194,6 +201,13 @@ body {
 .edit-entry-btn {
   border: 1px solid #887187;
   padding: 0.25rem 0.5rem;
+  align-self: flex-end;
+  color: #887187;
+  transition: 0.25s ease-in-out;
+}
+
+.edit-entry-btn:hover {
+  color: #FF4F79;
 }
 
 .overall-wrapper {

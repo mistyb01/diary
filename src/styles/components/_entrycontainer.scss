@@ -3,24 +3,32 @@
 .entry-container {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
     width: 100%;
 }
 
 .heading-entry {
     font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .entry-body {
     line-height: 160%;
     font-size: 1rem;
-    
 }
 
 .next-prev-container {
     display: flex;
     width: 100%;
     justify-content: space-between;
+}
+
+.top-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
 }
 
 .metadata-container {
@@ -30,9 +38,6 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    padding: 1rem;
-    // background-color: variables.$c-offwhite;
-    border-radius: 4px;
 }
 
 .metadata-row {
@@ -54,4 +59,11 @@
 .edit-entry-btn {
     border: 1px solid variables.$c-purple-lighter;
     padding: 0.25rem 0.5rem;
+    align-self: flex-end;
+    color: variables.$c-purple-lighter;
+    transition: 0.25s ease-in-out;
+}
+
+.edit-entry-btn:hover {
+    color: variables.$c-hotpink;
 }

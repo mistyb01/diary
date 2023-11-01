@@ -25,8 +25,8 @@ const EntryContainer = ({ entries, selectedEntry }: EntryContainerProps) => {
             <button>⬅ prev</button>
             <button>next ➡</button>
           </div>
-          <div className="metadata-container">
-            <div className="metadata-row">
+          <div className="top-row">
+            <div className="metadata-container">
               <div className="metadata-items">
                 <span className="icon-item">
                   <FiCalendar />
@@ -39,19 +39,21 @@ const EntryContainer = ({ entries, selectedEntry }: EntryContainerProps) => {
                   {dayjs(entryToShow.creation_timestamp).format("h:mm A")}
                 </span>
               </div>
-              <button className="edit-entry-btn">edit entry</button>
+              <div className="metadata-items">
+                <span className="icon-item">
+                  <FiCloudSnow /> 25° Kent WA
+                </span>
+                <span className="icon-item">
+                  <FiMusic /> COLORS // FLOW
+                </span>
+              </div>
             </div>
-            <div className="metadata-items">
-              <span className="icon-item">
-                <FiCloudSnow /> 25° Kent WA
-              </span>
-              <span className="icon-item">
-                <FiMusic /> COLORS // FLOW
-              </span>
-            </div>
+            <button className="edit-entry-btn">edit entry</button>
           </div>
-          <h1 className="heading-entry">{entryToShow.title}</h1>
-          <p className="entry-body">{entryToShow.text_body}</p>
+          <div>
+            <h1 className="heading-entry">{entryToShow.title}</h1>
+            <p className="entry-body">{entryToShow.text_body}</p>
+          </div>
         </div>
       )}
     </section>
