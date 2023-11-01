@@ -4,13 +4,28 @@
     height: 100vh;
     overflow-y: auto;
     scrollbar-color: variables.$c-darker-offwhite variables.$c-offwhite;
-    
+    position: relative;
     // scrollbar-width: thin;
+}
+
+.side-panel-toggle-container {
+    position: absolute;
+    cursor: pointer;
+}
+
+.side-panel-content {
     // spacing
+    margin-top: 2.5rem;
     h1 { margin-bottom: 1rem; }
     > * + * {
         margin-top: 2.5rem;
     }
+    transition: 0.2s ease-in-out;
+    opacity: 0;
+}
+
+.show-panel {
+    opacity: 1;
 }
 
 @media (max-width: 1000px) {

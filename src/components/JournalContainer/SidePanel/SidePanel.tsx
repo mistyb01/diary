@@ -1,8 +1,9 @@
 import YearListItem from "./YearListItem";
 
 import { useState } from "react";
-import { FiChevronsLeft } from "react-icons/fi";
-import { FiChevronsRight } from "react-icons/fi";
+import { CgMenuGridR } from "react-icons/cg";
+import { CgClose } from "react-icons/cg";
+
 import ReadingModeToggle from "./ReadingModeToggle";
 import Entry from "../../../types/entry";
 
@@ -25,22 +26,25 @@ const SidePanel = ({
         className="side-panel-toggle-container"
         onClick={() => setShowPanel(!showPanel)}
       >
-        {showPanel ? <FiChevronsLeft /> : <FiChevronsRight />}
+        {showPanel ? <CgClose /> : <CgMenuGridR />}
       </div>
-      {showPanel && (
-        <>
-          <ReadingModeToggle />
-          <div>
-            <h1 className="heading-label">entry list</h1>
-            {/* TODO: items are mapped to entry data */}
-            <YearListItem
-              entries={entries}
-              selectedEntry={selectedEntry}
-              updateSelectedEntry={updateSelectedEntry}
-            />
-          </div>
-        </>
-      )}
+
+      <div
+        className={
+          showPanel ? "side-panel-content show-panel" : "side-panel-content"
+        }
+      >
+        <ReadingModeToggle />
+        <div>
+          <h1 className="heading-label">entry list</h1>
+          {/* TODO: items are mapped to entry data */}
+          <YearListItem
+            entries={entries}
+            selectedEntry={selectedEntry}
+            updateSelectedEntry={updateSelectedEntry}
+          />
+        </div>
+      </div>
     </section>
   );
 };

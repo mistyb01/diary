@@ -57,12 +57,28 @@ body {
   height: 100vh;
   overflow-y: auto;
   scrollbar-color: #ecd7dd #F9F2F2;
+  position: relative;
 }
-.side-panel-container h1 {
+
+.side-panel-toggle-container {
+  position: absolute;
+  cursor: pointer;
+}
+
+.side-panel-content {
+  margin-top: 2.5rem;
+  transition: 0.2s ease-in-out;
+  opacity: 0;
+}
+.side-panel-content h1 {
   margin-bottom: 1rem;
 }
-.side-panel-container > * + * {
+.side-panel-content > * + * {
   margin-top: 2.5rem;
+}
+
+.show-panel {
+  opacity: 1;
 }
 
 @media (max-width: 1000px) {
