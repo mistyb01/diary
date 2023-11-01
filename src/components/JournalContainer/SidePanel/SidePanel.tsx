@@ -1,8 +1,9 @@
 import YearListItem from "./YearListItem";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { CgMenuGridR } from "react-icons/cg";
 import { CgClose } from "react-icons/cg";
+import autoAnimate from "@formkit/auto-animate";
 
 import ReadingModeToggle from "./ReadingModeToggle";
 import Entry from "../../../types/entry";
@@ -19,9 +20,14 @@ const SidePanel = ({
   updateSelectedEntry,
 }: SidePanelProps) => {
   const [showPanel, setShowPanel] = useState(true);
+  const parent = useRef(null);
+
+  useEffect(() => {
+    parent.current && autoAnimate(parent.current);
+  }, [parent]);
 
   return (
-    <section className="side-panel-container">
+    <section className="side-panel-container" ref={parent}>
       <div
         className="side-panel-toggle-container"
         onClick={() => setShowPanel(!showPanel)}
