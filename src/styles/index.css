@@ -188,13 +188,13 @@ body {
 .overall-wrapper {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .layout-grid-container {
   display: grid;
-  position: relative;
   width: min(100%, 1600px);
-  grid-template-columns: [first] min(300px, 20vw) [line2] auto [line3] min(250px, 20vw) [end];
+  grid-template-columns: [first] min(300px, 22vw) [line2] auto [line3] min(250px, 22vw) [end];
 }
 .layout-grid-container > * {
   padding: 2rem 1.5rem;
@@ -208,6 +208,11 @@ body {
 .side-panel-container {
   grid-column-start: first;
   grid-column-end: line2;
+}
+
+.nav-container {
+  grid-column-start: line3;
+  grid-column-end: end;
 }
 
 @media (max-width: 1000px) {
