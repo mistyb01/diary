@@ -20,6 +20,7 @@ const EntryContainer = ({
   let entryToShow: Entry | undefined = undefined;
   let indexOfSelectedEntry: number | undefined = undefined;
   let isNext: boolean = false;
+  let isPrev: boolean = false;
 
   if (selectedEntry) {
     entryToShow = entries.find((entry) => entry.id === selectedEntry);
@@ -30,6 +31,9 @@ const EntryContainer = ({
         indexOfSelectedEntry + 1 < entries.length
       ) {
         isNext = true;
+      }
+      if (indexOfSelectedEntry !== undefined && indexOfSelectedEntry - 1 >= 0) {
+        isPrev = true;
       }
     }
   }
@@ -45,13 +49,29 @@ const EntryContainer = ({
     }
   }
 
+  function prevEntry() {
+    if (indexOfSelectedEntry !== undefined && indexOfSelectedEntry - 1 >= 0) {
+      let newIdx = (indexOfSelectedEntry -= 1);
+      const newId = entries[newIdx].id;
+      updateSelectedEntry(newId);
+    }
+  }
+
   return (
     <section className="main-container">
       {entryToShow && (
         <div className="entry-container">
           <div className="next-prev-container">
-            <button>⬅ prev</button>
-            {isNext && <button onClick={nextEntry}>next ➡</button>}
+            {isPrev && (
+              <button className="prev-btn" onClick={prevEntry}>
+                ⬅ prev
+              </button>
+            )}
+            {isNext && (
+              <button className="next-btn" onClick={nextEntry}>
+                next ➡
+              </button>
+            )}
           </div>
           <div className="top-row">
             <div className="metadata-container">
