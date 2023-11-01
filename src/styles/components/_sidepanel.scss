@@ -4,15 +4,25 @@
     height: 100vh;
     overflow-y: auto;
     scrollbar-color: variables.$c-darker-offwhite variables.$c-offwhite;
+    position: relative;
     // scrollbar-width: thin;
+}
+
+.side-panel-toggle-container {
+    position: absolute;
+    cursor: pointer;
+}
+
+.side-panel-content {
     // spacing
+    margin-top: 2.5rem;
     h1 { margin-bottom: 1rem; }
     > * + * {
         margin-top: 2.5rem;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .side-panel-container {
         height: auto;
     }
@@ -58,6 +68,7 @@
 }
 
 .entry-list-item button {
+    text-align: left;
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -68,8 +79,6 @@
     border-left: 5px solid variables.$c-hotpink;
 }
 
-.reading-mode-toggle-container {
-}
 
 .radios {
     padding: 0rem 1.5rem;

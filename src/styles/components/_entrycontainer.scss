@@ -1,0 +1,72 @@
+@use '../helpers/variables';
+
+.entry-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.heading-entry {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.entry-body {
+    line-height: 160%;
+    font-size: 1rem;
+}
+
+.next-prev-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .next-btn {
+        margin-left: auto;
+    }
+}
+
+.top-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+}
+
+.metadata-container {
+    color: variables.$c-purple-lighter;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.metadata-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.metadata-items {
+    display: flex;
+    gap: 2rem;
+}
+
+.icon-item {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.edit-entry-btn {
+    border: 1px solid variables.$c-purple-lighter;
+    padding: 0.25rem 0.5rem;
+    align-self: flex-end;
+    color: variables.$c-purple-lighter;
+    transition: 0.25s ease-in-out;
+}
+
+.edit-entry-btn:hover {
+    color: variables.$c-hotpink;
+}

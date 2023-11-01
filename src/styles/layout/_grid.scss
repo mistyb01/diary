@@ -1,22 +1,43 @@
+.overall-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
 .layout-grid-container {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    width: min(100%, 1600px);
+    // min(300px, 20vw) will usually be 20vw since most screen sizes, 20vw is less than 300px.
+    // but for the really large sizes, when 20vw is a large width; the side columns get capped at 300px.
+    grid-template-columns: [first] min(300px, 22vw) [line2] auto [line3] min(250px, 22vw) [end];
     > * {
-        padding: 2rem 1.5rem;
+        padding: 2rem 2rem;
     }
 }
 
 .main-container {
-    grid-column-start: 4;
-    grid-column-end: 10;
+    grid-column-start: line2;
+    grid-column-end: line3;
 }
 
 .side-panel-container {
-    grid-column-start: 1;
-    grid-column-end: 4; 
+    grid-column-start: first;
+    grid-column-end: line2; 
 }
 
-@media (max-width: 768px) {
+.nav-container {
+    grid-column-start: line3;
+    grid-column-end: end;   
+}
+
+
+@media (max-width: 1000px) {
+    .layout-grid-container {
+        > * {
+            padding: 2rem 2.5rem;
+        }
+    }
+    
     .main-container {
         grid-column-start: 1;
         grid-column-end: 12;
@@ -26,4 +47,14 @@
         grid-column-start: 1;
         grid-column-end: 12; 
     }
+}
+
+
+@media (max-width: 600px) {
+    .layout-grid-container {
+        > * {
+            padding: 2rem 1.5rem;
+        }
+    }
+    
 }
