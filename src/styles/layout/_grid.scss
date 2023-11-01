@@ -11,7 +11,7 @@
     // but for the really large sizes, when 20vw is a large width; the side columns get capped at 300px.
     grid-template-columns: [first] min(300px, 22vw) [line2] auto [line3] min(250px, 22vw) [end];
     > * {
-        padding: 2rem 1.5rem;
+        padding: 2rem 2rem;
     }
 }
 

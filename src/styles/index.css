@@ -110,6 +110,7 @@ body {
 }
 
 .entry-list-item button {
+  text-align: left;
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -197,7 +198,7 @@ body {
   grid-template-columns: [first] min(300px, 22vw) [line2] auto [line3] min(250px, 22vw) [end];
 }
 .layout-grid-container > * {
-  padding: 2rem 1.5rem;
+  padding: 2rem 2rem;
 }
 
 .main-container {
