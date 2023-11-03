@@ -21,7 +21,9 @@ const YearListItem = ({
   selectedEntry,
   updateSelectedEntry,
 }: YearListItemProps) => {
-  const [showChildren, setShowChildren] = useState(true);
+  const [showChildren, setShowChildren] = useState(
+    year === dayjs().format("YYYY")
+  );
   const thisYearsEntries: Entry[] = entries.filter(
     (entry) => dayjs(entry.creation_timestamp).format("YYYY") === year
   );
