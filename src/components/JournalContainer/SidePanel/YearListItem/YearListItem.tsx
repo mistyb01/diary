@@ -9,7 +9,7 @@ import Entry from "../../../../types/entry";
 import { useState } from "react";
 
 interface YearListItemProps {
-  year: number;
+  year: string;
   entries: Entry[];
   selectedEntry: number | null;
   updateSelectedEntry: (value: React.SetStateAction<number | null>) => void;
