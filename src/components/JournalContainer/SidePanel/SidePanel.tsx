@@ -7,6 +7,7 @@ import autoAnimate from "@formkit/auto-animate";
 
 import ReadingModeToggle from "./ReadingModeToggle";
 import Entry from "../../../types/entry";
+import dayjs from "dayjs";
 
 interface SidePanelProps {
   entries: Entry[];
@@ -26,6 +27,16 @@ const SidePanel = ({
     parent.current && autoAnimate(parent.current, { duration: 175 });
   }, [parent]);
 
+  // get array of the years that contain entries
+  function getYearArr() {
+    const yearArr: string[] = [];
+    entries.forEach((entry) => {
+      const year = dayjs(entry.creation_timestamp).format("YYYY");
+      if (!yearArr.includes(year)) yearArr.push(year);
+    });
+    return yearArr;
+  }
+
   return (
     <section className="side-panel-container" ref={parent}>
       <div
@@ -42,6 +53,7 @@ const SidePanel = ({
             <h1 className="heading-label">entry list</h1>
             {/* TODO: items are mapped to entry data */}
             <YearListItem
+              year={2023}
               entries={entries}
               selectedEntry={selectedEntry}
               updateSelectedEntry={updateSelectedEntry}

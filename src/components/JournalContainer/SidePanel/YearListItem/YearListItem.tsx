@@ -9,19 +9,21 @@ import Entry from "../../../../types/entry";
 import { useState } from "react";
 
 interface YearListItemProps {
+  year: number;
   entries: Entry[];
   selectedEntry: number | null;
   updateSelectedEntry: (value: React.SetStateAction<number | null>) => void;
 }
 
 const YearListItem = ({
+  year,
   entries,
   selectedEntry,
   updateSelectedEntry,
 }: YearListItemProps) => {
   const [showChildren, setShowChildren] = useState(true);
-  // const [selectedEntry, setSelectedEntry] = useState<number | null>(null);
 
+  // get array of the months that contain entries
   function getMonthArr() {
     const monthArr: string[] = [];
     entries.forEach((entry) => {
@@ -37,9 +39,10 @@ const YearListItem = ({
         className="list-toggle--large"
         onClick={() => setShowChildren(!showChildren)}
       >
-        <h2 className="heading-top">2023</h2>
+        <h2 className="heading-top">{year}</h2>
         {showChildren ? <FiChevronDown /> : <FiChevronRight />}
       </button>
+
       {showChildren && (
         <ul className="list-side-panel">
           {getMonthArr().map((monthName) => {
@@ -48,8 +51,8 @@ const YearListItem = ({
                 {entries
                   .filter(
                     (entry) =>
-                      dayjs(entry.creation_timestamp).format("MMMM") ===
-                      monthName
+                      dayjs(entry.creation_timestamp).format("MMMM YYYY") ===
+                      `${monthName} ${year}`
                   )
                   // rudimentary sort for ascending days
                   .sort(
