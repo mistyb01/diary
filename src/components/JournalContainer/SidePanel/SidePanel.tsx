@@ -51,16 +51,18 @@ const SidePanel = ({
           <ReadingModeToggle />
           <div>
             <h1 className="heading-label">entry list</h1>
-            {getYearArr()
-              .sort((a, b) => parseInt(b) - parseInt(a))
-              .map((year) => (
-                <YearListItem
-                  year={year}
-                  entries={entries}
-                  selectedEntry={selectedEntry}
-                  updateSelectedEntry={updateSelectedEntry}
-                />
-              ))}
+            <ul className="year-list-container">
+              {getYearArr()
+                .sort((a, b) => parseInt(b) - parseInt(a))
+                .map((year) => (
+                  <YearListItem
+                    year={year}
+                    entries={entries}
+                    selectedEntry={selectedEntry}
+                    updateSelectedEntry={updateSelectedEntry}
+                  />
+                ))}
+            </ul>
           </div>
         </div>
       )}

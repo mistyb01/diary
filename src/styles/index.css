@@ -81,7 +81,11 @@ body {
   }
 }
 .year-list-container > * + * {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+}
+
+.year-list-item-container > * + * {
+  margin-top: 0.5rem;
 }
 
 .list-toggle {
@@ -102,7 +106,7 @@ body {
   list-style: none;
 }
 .list-side-panel li {
-  padding: 0.5rem 0rem 0.5rem 1rem;
+  padding: 0.25rem 0rem 0.25rem 1rem;
 }
 
 .list-side-panel--entry li {
