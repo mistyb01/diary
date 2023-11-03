@@ -6,11 +6,13 @@ import { FiChevronRight } from "react-icons/fi";
 const MonthListItem = ({
   month,
   children,
+  showByDefault,
 }: {
   month: string;
   children: ReactNode;
+  showByDefault: boolean;
 }) => {
-  const [showChildren, setShowChildren] = useState(false);
+  const [showChildren, setShowChildren] = useState(showByDefault);
 
   return (
     <li>

@@ -58,8 +58,8 @@ const SidePanel = ({
                   <YearListItem
                     year={year}
                     entries={entries}
-                    selectedEntry={selectedEntry}
-                    updateSelectedEntry={updateSelectedEntry}
+                    selectedEntryId={selectedEntry}
+                    updateSelectedEntryId={updateSelectedEntry}
                   />
                 ))}
             </ul>

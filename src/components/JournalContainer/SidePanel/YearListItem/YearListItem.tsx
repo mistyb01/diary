@@ -11,15 +11,15 @@ import { useState } from "react";
 interface YearListItemProps {
   year: string;
   entries: Entry[];
-  selectedEntry: number | null;
-  updateSelectedEntry: (value: React.SetStateAction<number | null>) => void;
+  selectedEntryId: number | null;
+  updateSelectedEntryId: (value: React.SetStateAction<number | null>) => void;
 }
 
 const YearListItem = ({
   year,
   entries,
-  selectedEntry,
-  updateSelectedEntry,
+  selectedEntryId,
+  updateSelectedEntryId,
 }: YearListItemProps) => {
   const [showChildren, setShowChildren] = useState(
     year === dayjs().format("YYYY")
@@ -38,6 +38,13 @@ const YearListItem = ({
     return monthArr;
   }
 
+  function getSelectedEntryMonth(id: number | null) {
+    let selectedEntryMonth = dayjs(
+      entries.find((e) => e.id === id)?.creation_timestamp
+    ).format("MMMM");
+    return selectedEntryMonth;
+  }
+
   return (
     <div className="year-list-item-container">
       <button
@@ -52,7 +59,13 @@ const YearListItem = ({
         <ul className="list-side-panel">
           {getMonthArr().map((monthName) => {
             return (
-              <MonthListItem key={monthName} month={monthName}>
+              <MonthListItem
+                key={monthName}
+                month={monthName}
+                showByDefault={
+                  getSelectedEntryMonth(selectedEntryId) === monthName
+                }
+              >
                 {thisYearsEntries
                   .filter(
                     (entry) =>
@@ -68,8 +81,8 @@ const YearListItem = ({
                   .map((entry) => (
                     <EntryListItem
                       key={entry.id}
-                      isSelected={entry.id === selectedEntry}
-                      updateIsSelected={() => updateSelectedEntry(entry.id)}
+                      isSelected={entry.id === selectedEntryId}
+                      updateIsSelected={() => updateSelectedEntryId(entry.id)}
                     >
                       <span className="label-bold">
                         {dayjs(entry.creation_timestamp).format("D")}
