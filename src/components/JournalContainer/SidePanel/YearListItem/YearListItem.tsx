@@ -22,11 +22,14 @@ const YearListItem = ({
   updateSelectedEntry,
 }: YearListItemProps) => {
   const [showChildren, setShowChildren] = useState(true);
+  const thisYearsEntries: Entry[] = entries.filter(
+    (entry) => dayjs(entry.creation_timestamp).format("YYYY") === year
+  );
 
   // get array of the months that contain entries
   function getMonthArr() {
     const monthArr: string[] = [];
-    entries.forEach((entry) => {
+    thisYearsEntries.forEach((entry) => {
       const month = dayjs(entry.creation_timestamp).format("MMMM");
       if (!monthArr.includes(month)) monthArr.push(month);
     });
@@ -48,11 +51,11 @@ const YearListItem = ({
           {getMonthArr().map((monthName) => {
             return (
               <MonthListItem key={monthName} month={monthName}>
-                {entries
+                {thisYearsEntries
                   .filter(
                     (entry) =>
-                      dayjs(entry.creation_timestamp).format("MMMM YYYY") ===
-                      `${monthName} ${year}`
+                      dayjs(entry.creation_timestamp).format("MMMM") ===
+                      `${monthName}`
                   )
                   // rudimentary sort for ascending days
                   .sort(

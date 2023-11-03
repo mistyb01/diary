@@ -3,39 +3,146 @@ import Entry from "../types/entry";
 const mockData : Entry[] =  [
   {
     "id": 1,
-    "userID": 1,
-    "title": "A Day on the Research Vessel",
-    "text_body": "Today, I had the privilege of embarking on a research expedition aboard our research vessel. We set sail early in the morning, heading to the open waters of the Pacific Ocean. As a marine biologist, these expeditions are the highlight of my career. Our mission was to study the migration patterns of humpback whales. For hours, we scanned the horizon, searching for telltale signs of these majestic creatures. Finally, our patience paid off as we spotted a group of humpbacks breaching and slapping their tails on the water's surface. It was a breathtaking sight. We carefully approached the whales, ensuring that we didn't disturb their natural behavior. We collected data on their behaviors, took photographs, and recorded underwater vocalizations. These magnificent creatures never cease to amaze me with their intelligence and grace. Throughout the day, we also observed various seabirds, dolphins, and even a rare sighting of a leatherback sea turtle. Our research contributes to the conservation efforts and understanding of these marine ecosystems, and I feel privileged to be a part of it.",
-    "creation_timestamp": "2023-10-27T09:00:00"
+    "user_id": 1001,
+    "creation_timestamp": "2022-01-15T09:30:00Z",
+    "title": "New Year's Resolution",
+    "text_body": "I've decided to make a few New Year's resolutions this year. I want to focus on my health and start a regular exercise routine."
   },
   {
     "id": 2,
-    "userID": 2,
-    "title": "Coral Reef Expedition",
-    "text_body": "Today, I had the opportunity to explore a vibrant coral reef ecosystem. As a marine biologist, studying these underwater wonderlands is a dream come true. The reef we visited was teeming with life, and I couldn't wait to document and analyze the diverse species that call it home. My team and I donned our scuba gear and descended into the crystal-clear waters. The kaleidoscope of colors and shapes that greeted us was simply astounding. We swam among schools of tropical fish, spotted intricate coral formations, and even encountered a gentle manta ray gliding gracefully through the water. Our research involved documenting the health of the coral and monitoring for any signs of coral bleaching, a threat to these delicate ecosystems. We carefully collected samples and conducted underwater surveys to track changes over time. The highlight of the day was our discovery of a hidden cave within the reef. Inside, we found a stunning array of sea sponges, sea anemones, and tiny seahorses. It was a reminder of the hidden treasures that our oceans hold, and the importance of preserving these ecosystems for future generations. As the day drew to a close, we resurfaced with a sense of awe and responsibility. Our work as marine biologists is vital to understanding and conserving these fragile environments.",
-    "creation_timestamp": "2023-10-28T11:30:00"
+    "user_id": 1001,
+    "creation_timestamp": "2022-03-20T18:15:00Z",
+    "title": "Weekend Getaway",
+    "text_body": "Spent the weekend in a cozy cabin in the woods. It was a great escape from the hustle and bustle of city life."
   },
   {
     "id": 3,
-    "userID": 3,
-    "title": "Tracking Sea Turtle Nesting",
-    "text_body": "Today marked a crucial phase in our ongoing sea turtle conservation project. I had the privilege of monitoring sea turtle nesting activity on a remote beach. The preservation of these magnificent creatures is at the heart of our research, and every nesting season is a critical part of that effort. Under the moonlight, we patrolled the beach in search of nesting female sea turtles. The soft rustling of their fins on the sand was a mesmerizing sight. Once we identified a nesting turtle, we observed her from a distance to avoid causing stress. We collected valuable data, including measurements, markings, and nest location coordinates. It's always a moving experience to witness these ancient creatures returning to their ancestral nesting grounds. The cycle of life continues as the turtles dig a hole in the sand and deposit their precious eggs. We carefully marked the nest, recording the number of eggs laid, and then ensured it was protected from potential threats. Our work doesn't end with the nesting season. We also track the hatchlings when they emerge and make their way to the sea. Protecting these young turtles during this vulnerable stage is a vital part of our conservation efforts. As a marine biologist, I feel a deep connection to these sea turtles, and I'm dedicated to ensuring their survival in the face of the many challenges they face.",
-    "creation_timestamp": "2023-11-05T08:45:00"
+    "user_id": 1002,
+    "creation_timestamp": "2022-06-05T14:45:00Z",
+    "title": "Graduation Day",
+    "text_body": "Today was my graduation day. It's been an incredible journey, and I'm excited for what the future holds."
   },
   {
     "id": 4,
-    "userID": 1,
-    "title": "Deep-Sea Exploration",
-    "text_body": "Venturing into the depths of the ocean is always a thrilling experience. Our deep-sea exploration mission took us to the abyssal plains, where sunlight barely penetrates and unique, mysterious creatures thrive in the darkness. As a marine biologist, I was eager to discover what secrets the deep sea held. Our submersible descended into the inky depths, and as we reached the seafloor, a whole new world came into view. We observed bioluminescent organisms, such as anglerfish and giant squid, which illuminated the darkness with their otherworldly glow. These adaptations to the extreme environment never cease to amaze me. We collected samples of deep-sea creatures and sediment to study later. Each discovery added to our understanding of the intricate web of life in this remote habitat. The pressure at these depths is immense, and the darkness can be disorienting, but our training and technology kept us safe and allowed us to document our findings. Our research will contribute to the conservation of these unique ecosystems and the protection of their fragile balance. The deep sea remains a frontier of exploration, and I feel fortunate to be part of the ongoing quest to unlock its secrets.",
-    "creation_timestamp": "2024-11-15T16:30:00"
+    "user_id": 1002,
+    "creation_timestamp": "2022-09-12T12:00:00Z",
+    "title": "Job Interview",
+    "text_body": "Had a job interview today. Felt nervous, but I think it went well. Keeping my fingers crossed!"
   },
   {
     "id": 5,
-    "userID": 2,
-    "title": "Shark Tagging Expedition",
-    "text_body": "Today, we embarked on a shark tagging expedition in the open waters. Sharks are apex predators, and understanding their behavior and migratory patterns is essential for marine conservation efforts. We were equipped with specialized tagging equipment and a deep respect for these powerful creatures. As the sun rose, we located a group of sharks near a known aggregation site. With practiced precision, we approached the sharks, carefully avoiding any actions that might stress them. Using specialized equipment, we tagged several individuals, recording their size, species, and behavior. The experience was both thrilling and humbling. Observing these magnificent creatures up close revealed the grace and power they possess. It's a reminder of the critical role sharks play in maintaining the health of our oceans. Our data will contribute to a better understanding of shark populations and their movements, which in turn informs conservation policies and helps protect these vital species. As a marine biologist, these moments of direct interaction with the subjects of our study are incredibly rewarding and reinforce my commitment to marine conservation.",
-    "creation_timestamp": "2023-11-20T10:15:00"
-  },]
+    "user_id": 1003,
+    "creation_timestamp": "2023-02-08T19:20:00Z",
+    "title": "Travel Plans",
+    "text_body": "Planning a trip to Europe later this year. Can't wait to explore new places and try different cuisines."
+  },
+  {
+    "id": 6,
+    "user_id": 1003,
+    "creation_timestamp": "2023-04-17T10:10:00Z",
+    "title": "Family Reunion",
+    "text_body": "Attended a family reunion today. It was great to catch up with relatives I haven't seen in years."
+  },
+  {
+    "id": 7,
+    "user_id": 1004,
+    "creation_timestamp": "2023-07-30T16:50:00Z",
+    "title": "Hiking Adventure",
+    "text_body": "Went on a challenging hike in the mountains. The views from the summit were breathtaking."
+  },
+  {
+    "id": 8,
+    "user_id": 1004,
+    "creation_timestamp": "2023-10-10T08:05:00Z",
+    "title": "New Hobby",
+    "text_body": "Started learning how to play the guitar. It's a fun and rewarding experience."
+  },
+  {
+    "id": 9,
+    "user_id": 1005,
+    "creation_timestamp": "2024-01-05T11:25:00Z",
+    "title": "A New Chapter",
+    "text_body": "Today, I started a new job. Excited to see where this career path takes me."
+  },
+  {
+    "id": 10,
+    "user_id": 1005,
+    "creation_timestamp": "2024-04-22T15:30:00Z",
+    "title": "Beach Vacation",
+    "text_body": "Spent a relaxing week at the beach. The sound of the waves is so soothing."
+  },
+  {
+    "id": 11,
+    "user_id": 1006,
+    "creation_timestamp": "2024-09-08T10:40:00Z",
+    "title": "New Pet",
+    "text_body": "Adopted a cute puppy today. It's been a joy having a furry friend around."
+  },
+  {
+    "id": 12,
+    "user_id": 1006,
+    "creation_timestamp": "2025-02-14T12:15:00Z",
+    "title": "Valentine's Day",
+    "text_body": "Celebrated Valentine's Day with a romantic dinner. Love is in the air."
+  },
+  {
+    "id": 13,
+    "user_id": 1007,
+    "creation_timestamp": "2025-06-30T17:55:00Z",
+    "title": "Gardening Hobby",
+    "text_body": "Started a small garden in my backyard. It's therapeutic and adds beauty to my home."
+  },
+  {
+    "id": 14,
+    "user_id": 1007,
+    "creation_timestamp": "2025-10-19T14:00:00Z",
+    "title": "Road Trip",
+    "text_body": "Embarked on a spontaneous road trip with friends. Unplanned adventures are the best."
+  },
+  {
+    "id": 15,
+    "user_id": 1008,
+    "creation_timestamp": "2026-03-15T09:10:00Z",
+    "title": "Promotion",
+    "text_body": "Received a promotion at work today. Hard work pays off!"
+  },
+  {
+    "id": 16,
+    "user_id": 1008,
+    "creation_timestamp": "2026-07-12T13:40:00Z",
+    "title": "Summer Festival",
+    "text_body": "Enjoyed the summer festival with friends. Music, food, and good company."
+  },
+  {
+    "id": 17,
+    "user_id": 1009,
+    "creation_timestamp": "2026-11-02T11:20:00Z",
+    "title": "Book Club Meeting",
+    "text_body": "Attended the monthly book club meeting. Reading is a great way to escape."
+  },
+  {
+    "id": 18,
+    "user_id": 1009,
+    "creation_timestamp": "2027-04-27T18:00:00Z",
+    "title": "Home Renovation",
+    "text_body": "Started a home renovation project. It's a lot of work, but it's going to be worth it."
+  },
+  {
+    "id": 19,
+    "user_id": 1010,
+    "creation_timestamp": "2027-09-10T14:30:00Z",
+    "title": "Mountain Retreat",
+    "text_body": "Spent a peaceful weekend in a mountain cabin. The serenity was much needed."
+  },
+  {
+    "id": 20,
+    "user_id": 1010,
+    "creation_timestamp": "2027-12-25T20:00:00Z",
+    "title": "Christmas Celebration",
+    "text_body": "Celebrated Christmas with family and friends. The joy and laughter are what makes this season special."
+  }
+]
+
 
 class EntryService {
     async getEntries(): Promise<Entry[]> {
