@@ -11,7 +11,7 @@ const JournalContainer = () => {
   const [selectedEntry, setSelectedEntry] = useState<number | null>(null);
 
   // Function to find the index of the most recent entry
-  function findMostRecentEntryIndex(entries: Entry[]) {
+  function findMostRecentEntryId(entries: Entry[]) {
     if (!entries || entries.length === 0) {
       return -1; // Return -1 if the list is empty
     }
@@ -21,7 +21,7 @@ const JournalContainer = () => {
         ? a
         : b
     );
-    return entries.indexOf(mostRecentEntry);
+    return mostRecentEntry.id;
   }
 
   useEffect(() => {
@@ -29,7 +29,8 @@ const JournalContainer = () => {
       .getEntries()
       .then((entries) => {
         setEntries(entries);
-        setSelectedEntry(findMostRecentEntryIndex(entries));
+        //bugfix: need ID of most recent entry; not its index.
+        setSelectedEntry(findMostRecentEntryId(entries));
       })
       .catch((error) => console.log("error:", error));
   }, []);
