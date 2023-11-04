@@ -38,10 +38,10 @@ const YearListItem = ({
     return monthArr;
   }
 
-  function getSelectedEntryMonth(id: number | null) {
+  function getSelectedEntryMonthYear(id: number | null) {
     let selectedEntryMonth = dayjs(
       entries.find((e) => e.id === id)?.creation_timestamp
-    ).format("MMMM");
+    ).format("MMMM YYYY");
     return selectedEntryMonth;
   }
 
@@ -63,7 +63,8 @@ const YearListItem = ({
                 key={monthName}
                 month={monthName}
                 showByDefault={
-                  getSelectedEntryMonth(selectedEntryId) === monthName
+                  getSelectedEntryMonthYear(selectedEntryId) ===
+                  `${monthName} ${year}`
                 }
               >
                 {thisYearsEntries
