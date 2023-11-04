@@ -21,7 +21,7 @@ const MonthListItem = ({
         onClick={() => setShowChildren(!showChildren)}
       >
         <h3 className="label-bold">{month}</h3>
-        {showChildren ? <FiChevronDown /> : <FiChevronRight />}
+        {showByDefault || showChildren ? <FiChevronDown /> : <FiChevronRight />}
       </button>
       {(showByDefault || showChildren) && (
         <ul className="list-side-panel list-side-panel--entry">{children}</ul>

@@ -27,6 +27,8 @@ const YearListItem = ({
   const thisYearsEntries: Entry[] = entries.filter(
     (entry) => dayjs(entry.creation_timestamp).format("YYYY") === year
   );
+  const yearMatchesSelectedEntry =
+    getSelectedEntryYear(selectedEntryId) === year;
 
   // get array of the months that contain entries
   function getMonthArr() {
@@ -45,6 +47,13 @@ const YearListItem = ({
     return selectedEntryMonth;
   }
 
+  function getSelectedEntryYear(id: number | null) {
+    let selectedEntryYear = dayjs(
+      entries.find((e) => e.id === id)?.creation_timestamp
+    ).format("YYYY");
+    return selectedEntryYear;
+  }
+
   return (
     <div className="year-list-item-container">
       <button
@@ -52,10 +61,14 @@ const YearListItem = ({
         onClick={() => setShowChildren(!showChildren)}
       >
         <h2 className="heading-top">{year}</h2>
-        {showChildren ? <FiChevronDown /> : <FiChevronRight />}
+        {showChildren || yearMatchesSelectedEntry ? (
+          <FiChevronDown />
+        ) : (
+          <FiChevronRight />
+        )}
       </button>
 
-      {showChildren && (
+      {(showChildren || yearMatchesSelectedEntry) && (
         <ul className="list-side-panel">
           {getMonthArr().map((monthName) => {
             return (
