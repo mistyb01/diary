@@ -12,7 +12,7 @@ const MonthListItem = ({
   children: ReactNode;
   showByDefault: boolean;
 }) => {
-  const [showChildren, setShowChildren] = useState(showByDefault);
+  const [showChildren, setShowChildren] = useState(false);
 
   return (
     <li>
@@ -23,7 +23,7 @@ const MonthListItem = ({
         <h3 className="label-bold">{month}</h3>
         {showChildren ? <FiChevronDown /> : <FiChevronRight />}
       </button>
-      {showChildren && (
+      {(showByDefault || showChildren) && (
         <ul className="list-side-panel list-side-panel--entry">{children}</ul>
       )}
     </li>
