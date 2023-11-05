@@ -1,8 +1,8 @@
 import YearListItem from "./YearListItem";
 
 import { useState, useEffect, useRef } from "react";
-import { CgMenuGridR } from "react-icons/cg";
-import { CgClose } from "react-icons/cg";
+import MenuIcon from "../../Icons/MenuIcon";
+import CloseIcon from "../../Icons/CloseIcon";
 import autoAnimate from "@formkit/auto-animate";
 
 import ReadingModeToggle from "./ReadingModeToggle";
@@ -43,7 +43,7 @@ const SidePanel = ({
         className="side-panel-toggle-container"
         onClick={() => setShowPanel(!showPanel)}
       >
-        {showPanel ? <CgClose /> : <CgMenuGridR />}
+        {showPanel ? <CloseIcon /> : <MenuIcon />}
       </div>
 
       {showPanel && (

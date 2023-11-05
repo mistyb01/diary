@@ -1,8 +1,8 @@
 import EntryListItem from "./EntryListItem/EntryListItem";
 import MonthListItem from "./MonthListItem/MonthListItem";
 import * as dayjs from "dayjs";
-import { FiChevronDown } from "react-icons/fi";
-import { FiChevronRight } from "react-icons/fi";
+import ChevronDownIcon from "../../../Icons/ChevronDownIcon";
+import ChevronRightIcon from "../../../Icons/ChevronRightIcon";
 
 import Entry from "../../../../types/entry";
 
@@ -68,9 +68,9 @@ const YearListItem = ({
       >
         <h2 className="heading-top">{year}</h2>
         {showChildren || yearMatchesSelectedEntry ? (
-          <FiChevronDown />
+          <ChevronDownIcon />
         ) : (
-          <FiChevronRight />
+          <ChevronRightIcon />
         )}
       </button>
 

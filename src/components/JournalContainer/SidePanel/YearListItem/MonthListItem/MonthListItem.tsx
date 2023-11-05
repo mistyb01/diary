@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { useState } from "react";
-import { FiChevronDown } from "react-icons/fi";
-import { FiChevronRight } from "react-icons/fi";
+import ChevronDownIcon from "../../../../Icons/ChevronDownIcon";
+import ChevronRightIcon from "../../../../Icons/ChevronRightIcon";
 
 const MonthListItem = ({
   month,
@@ -21,7 +21,11 @@ const MonthListItem = ({
         onClick={() => setShowChildren(!showChildren)}
       >
         <h3 className="label-bold">{month}</h3>
-        {showByDefault || showChildren ? <FiChevronDown /> : <FiChevronRight />}
+        {showByDefault || showChildren ? (
+          <ChevronDownIcon />
+        ) : (
+          <ChevronRightIcon />
+        )}
       </button>
       {(showByDefault || showChildren) && (
         <ul className="list-side-panel list-side-panel--entry">{children}</ul>

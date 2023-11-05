@@ -1,10 +1,7 @@
 import Entry from "../../../types/entry";
 import dayjs from "dayjs";
-
-import { FiCalendar } from "react-icons/fi";
-import { FiClock } from "react-icons/fi";
-import { FiMusic } from "react-icons/fi";
-import { FiCloudSnow } from "react-icons/fi";
+import CalendarIcon from "../../Icons/CalendarIcon";
+import ClockIcon from "../../Icons/ClockIcon";
 
 interface EntryContainerProps {
   entries: Entry[];
@@ -77,23 +74,19 @@ const EntryContainer = ({
             <div className="metadata-container">
               <div className="metadata-items">
                 <span className="icon-item">
-                  <FiCalendar />
+                  <CalendarIcon />
                   {dayjs(entryToShow.creation_timestamp).format(
                     "ddd, MMMM D, YYYY"
                   )}
                 </span>
                 <span className="icon-item">
-                  <FiClock />
+                  <ClockIcon />
                   {dayjs(entryToShow.creation_timestamp).format("h:mm A")}
                 </span>
               </div>
               <div className="metadata-items">
-                <span className="icon-item">
-                  <FiCloudSnow /> 25° Kent WA
-                </span>
-                <span className="icon-item">
-                  <FiMusic /> COLORS // FLOW
-                </span>
+                <span className="icon-item">25° Kent WA</span>
+                <span className="icon-item">COLORS // FLOW</span>
               </div>
             </div>
             <button className="edit-entry-btn">edit entry</button>
