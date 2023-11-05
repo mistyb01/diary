@@ -46,13 +46,6 @@ const YearListItem = ({
     return monthArr;
   }
 
-  function getSelectedEntryMonthYear(id: number | null) {
-    let selectedEntryMonth = dayjs(
-      entries.find((e) => e.id === id)?.creation_timestamp
-    ).format("MMMM YYYY");
-    return selectedEntryMonth;
-  }
-
   function getSelectedEntryYear(id: number | null) {
     let selectedEntryYear = dayjs(
       entries.find((e) => e.id === id)?.creation_timestamp
@@ -78,14 +71,7 @@ const YearListItem = ({
         <ul className="list-side-panel">
           {getMonthArr().map((monthName) => {
             return (
-              <MonthListItem
-                key={monthName}
-                month={monthName}
-                showByDefault={
-                  getSelectedEntryMonthYear(selectedEntryId) ===
-                  `${monthName} ${year}`
-                }
-              >
+              <MonthListItem key={monthName} month={monthName}>
                 {thisYearsEntries
                   .filter(
                     (entry) =>
