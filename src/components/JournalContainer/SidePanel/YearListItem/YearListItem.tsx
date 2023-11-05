@@ -59,8 +59,16 @@ const YearListItem = ({
         className="list-toggle--large"
         onClick={() => setShowChildren(!showChildren)}
       >
-        <h2 className="heading-top">{year}</h2>
-        {showChildren || yearMatchesSelectedEntry ? (
+        <h2
+          className={
+            yearMatchesSelectedEntry
+              ? `heading-top heading-highlighted`
+              : `heading-top`
+          }
+        >
+          {year}
+        </h2>
+        {showChildren ? (
           <ChevronDownIcon size="medium" />
         ) : (
           <ChevronRightIcon size="medium" />
