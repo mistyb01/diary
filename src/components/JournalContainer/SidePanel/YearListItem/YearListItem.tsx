@@ -24,9 +24,15 @@ const YearListItem = ({
   const [showChildren, setShowChildren] = useState(
     year === dayjs().format("YYYY")
   );
-  const thisYearsEntries: Entry[] = entries.filter(
-    (entry) => dayjs(entry.creation_timestamp).format("YYYY") === year
-  );
+  const thisYearsEntries: Entry[] = entries
+    .filter((entry) => dayjs(entry.creation_timestamp).format("YYYY") === year)
+    // orders entries so most recent ones are at the top
+    .sort(
+      (a, b) =>
+        new Date(b.creation_timestamp).getTime() -
+        new Date(a.creation_timestamp).getTime()
+    );
+
   const yearMatchesSelectedEntry =
     getSelectedEntryYear(selectedEntryId) === year;
 
