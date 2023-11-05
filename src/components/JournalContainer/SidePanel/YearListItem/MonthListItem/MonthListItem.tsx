@@ -22,9 +22,9 @@ const MonthListItem = ({
       >
         <h3 className="label-bold">{month}</h3>
         {showByDefault || showChildren ? (
-          <ChevronDownIcon />
+          <ChevronDownIcon size="small" />
         ) : (
-          <ChevronRightIcon />
+          <ChevronRightIcon size="small" />
         )}
       </button>
       {(showByDefault || showChildren) && (

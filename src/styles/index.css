@@ -42,6 +42,24 @@ body {
   font-weight: 600;
 }
 
+.feather {
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.icon-small {
+  width: 12px;
+  height: 12px;
+}
+
+.icon-medium {
+  width: 18px;
+  height: 18px;
+}
+
 .nav-container {
   position: absolute;
   right: 0px;

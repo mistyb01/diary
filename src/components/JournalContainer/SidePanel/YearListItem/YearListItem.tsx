@@ -68,9 +68,9 @@ const YearListItem = ({
       >
         <h2 className="heading-top">{year}</h2>
         {showChildren || yearMatchesSelectedEntry ? (
-          <ChevronDownIcon />
+          <ChevronDownIcon size="medium" />
         ) : (
-          <ChevronRightIcon />
+          <ChevronRightIcon size="medium" />
         )}
       </button>
 

@@ -74,13 +74,13 @@ const EntryContainer = ({
             <div className="metadata-container">
               <div className="metadata-items">
                 <span className="icon-item">
-                  <CalendarIcon />
+                  <CalendarIcon size="small" />
                   {dayjs(entryToShow.creation_timestamp).format(
                     "ddd, MMMM D, YYYY"
                   )}
                 </span>
                 <span className="icon-item">
-                  <ClockIcon />
+                  <ClockIcon size="small" />
                   {dayjs(entryToShow.creation_timestamp).format("h:mm A")}
                 </span>
               </div>

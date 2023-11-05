@@ -43,7 +43,7 @@ const SidePanel = ({
         className="side-panel-toggle-container"
         onClick={() => setShowPanel(!showPanel)}
       >
-        {showPanel ? <CloseIcon /> : <MenuIcon />}
+        {showPanel ? <CloseIcon size="medium" /> : <MenuIcon size="medium" />}
       </div>
 
       {showPanel && (
