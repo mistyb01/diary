@@ -32,14 +32,36 @@ body {
 
 .heading-label {
   font-size: 0.875rem;
-  color: #FF4F79;
+  color: #ff6f91;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.heading-highlighted {
+  color: #FF4F79;
 }
 
 .label-bold {
   font-size: 1rem;
   font-weight: 600;
+}
+
+.feather {
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.icon-small {
+  width: 12px;
+  height: 12px;
+}
+
+.icon-medium {
+  width: 18px;
+  height: 18px;
 }
 
 .nav-container {
@@ -81,7 +103,11 @@ body {
   }
 }
 .year-list-container > * + * {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+}
+
+.year-list-item-container > * + * {
+  margin-top: 0.5rem;
 }
 
 .list-toggle {
@@ -102,7 +128,7 @@ body {
   list-style: none;
 }
 .list-side-panel li {
-  padding: 0.5rem 0rem 0.5rem 1rem;
+  padding: 0.25rem 0rem 0.25rem 1rem;
 }
 
 .list-side-panel--entry li {
@@ -115,7 +141,7 @@ body {
   background-color: #F9F2F2;
 }
 .list-side-panel--entry li:hover {
-  color: #FF4F79;
+  color: #ff6f91;
   opacity: 0.75;
 }
 
@@ -127,8 +153,8 @@ body {
 }
 
 .entry-list-item--selected {
-  color: #FF4F79;
-  border-left: 5px solid #FF4F79;
+  color: #ff6f91;
+  border-left: 5px solid #ff6f91;
 }
 
 .radios {
@@ -210,7 +236,7 @@ body {
 }
 
 .edit-entry-btn:hover {
-  color: #FF4F79;
+  color: #ff6f91;
 }
 
 .overall-wrapper {

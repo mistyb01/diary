@@ -18,6 +18,10 @@ body {
     text-transform: uppercase;
 }
 
+.heading-highlighted {
+    color: variables.$c-hotpink-darker;
+}
+
 .label-bold {
     font-size: 1rem;
     font-weight: 600;
