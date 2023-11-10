@@ -66,6 +66,7 @@ const SidePanel = ({
                 .map((year) => (
                   <YearListItem
                     year={year}
+                    key={year}
                     entries={entries}
                     selectedEntryId={selectedEntry}
                     updateSelectedEntryId={updateSelectedEntry}

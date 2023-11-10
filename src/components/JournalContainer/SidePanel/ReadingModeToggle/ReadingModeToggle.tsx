@@ -16,13 +16,13 @@ const ReadingModeToggle = ({
         <div className="radio-option">
           <input
             type="radio"
-            id="page-a-day"
+            id="singlePage"
             name="mode"
-            value="page-a-day"
+            value="singlePage"
             checked={readingMode === "singlePage"}
             onChange={() => updateReadingMode("singlePage")}
           />
-          <label htmlFor="page-a-day">Page-a-day</label>
+          <label htmlFor="singlePage">Single page</label>
         </div>
 
         <div className="radio-option">
