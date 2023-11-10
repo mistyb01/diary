@@ -4,11 +4,13 @@ import { useState, useEffect } from "react";
 // utility file where API calls for entries will be kept
 import { entryService } from "../../api/EntryService";
 import Entry from "../../types/entry";
-import dayjs from "dayjs";
 
 const JournalContainer = () => {
   const [entries, setEntries] = useState<Entry[]>([]);
   const [selectedEntry, setSelectedEntry] = useState<number | null>(null);
+  const [readingMode, setReadingMode] = useState<"singlePage" | "scroll">(
+    "singlePage"
+  );
 
   function findMostRecentEntryId(entries: Entry[]) {
     if (!entries || entries.length === 0) {
@@ -44,6 +46,7 @@ const JournalContainer = () => {
         entries={entries}
         selectedEntry={selectedEntry}
         updateSelectedEntry={(value) => setSelectedEntry(value)}
+        readingMode={readingMode}
       />
     </>
   );
