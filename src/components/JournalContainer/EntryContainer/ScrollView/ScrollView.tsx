@@ -1,4 +1,5 @@
 import Entry from "../../../../types/entry";
+import IndividualEntry from "../IndividualEntry";
 
 interface ScrollViewProps {
   entries: Entry[];
@@ -7,7 +8,15 @@ interface ScrollViewProps {
 }
 
 const ScrollView = ({ entries }: ScrollViewProps) => {
-  return <section className="main-container">scroll</section>;
+  return (
+    <section className="main-container">
+      <div className="scroll-container">
+        {entries.map((entry) => (
+          <IndividualEntry entry={entry} />
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export default ScrollView;

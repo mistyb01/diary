@@ -4,8 +4,9 @@
     height: 100vh;
     overflow-y: auto;
     scrollbar-color: variables.$c-darker-offwhite variables.$c-offwhite;
-    position: relative;
-    // scrollbar-width: thin;
+    position: sticky;
+    top: 0;
+    scrollbar-width: thin;
 }
 
 .side-panel-toggle-container {
@@ -25,6 +26,7 @@
 @media (max-width: 1000px) {
     .side-panel-container {
         height: auto;
+        position: relative;
     }
 }
 
