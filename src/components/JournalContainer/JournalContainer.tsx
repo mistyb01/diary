@@ -9,7 +9,7 @@ const JournalContainer = () => {
   const [entries, setEntries] = useState<Entry[]>([]);
   const [selectedEntry, setSelectedEntry] = useState<number | null>(null);
   const [readingMode, setReadingMode] = useState<"singlePage" | "scroll">(
-    "singlePage"
+    "scroll"
   );
 
   function findMostRecentEntryId(entries: Entry[]) {

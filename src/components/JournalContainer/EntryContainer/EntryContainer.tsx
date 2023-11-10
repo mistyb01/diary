@@ -3,7 +3,8 @@ import dayjs from "dayjs";
 import CalendarIcon from "../../Icons/CalendarIcon";
 import ClockIcon from "../../Icons/ClockIcon";
 
-import SinglePage from "./SinglePage/SinglePage";
+import SinglePage from "./SinglePage";
+import ScrollView from "./ScrollView";
 
 interface EntryContainerProps {
   entries: Entry[];
@@ -69,7 +70,7 @@ const EntryContainer = ({
           isPrev={isPrev}
         />
       )}
-      {readingMode === "scroll" && <p>scrollmode</p>}
+      {readingMode === "scroll" && <ScrollView />}
     </>
   );
 };
