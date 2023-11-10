@@ -41,6 +41,8 @@ const JournalContainer = () => {
         entries={entries}
         selectedEntry={selectedEntry}
         updateSelectedEntry={(value) => setSelectedEntry(value)}
+        readingMode={readingMode}
+        updateReadingMode={(mode) => setReadingMode(mode)}
       />
       <EntryContainer
         entries={entries}

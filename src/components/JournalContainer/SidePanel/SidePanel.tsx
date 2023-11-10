@@ -13,12 +13,18 @@ interface SidePanelProps {
   entries: Entry[];
   selectedEntry: number | null;
   updateSelectedEntry: (value: React.SetStateAction<number | null>) => void;
+  readingMode: "singlePage" | "scroll";
+  updateReadingMode: (
+    mode: React.SetStateAction<"singlePage" | "scroll">
+  ) => void;
 }
 
 const SidePanel = ({
   entries,
   selectedEntry,
   updateSelectedEntry,
+  readingMode,
+  updateReadingMode,
 }: SidePanelProps) => {
   const [showPanel, setShowPanel] = useState(true);
   const parent = useRef(null);
@@ -48,7 +54,10 @@ const SidePanel = ({
 
       {showPanel && (
         <div className="side-panel-content">
-          <ReadingModeToggle />
+          <ReadingModeToggle
+            readingMode={readingMode}
+            updateReadingMode={updateReadingMode}
+          />
           <div>
             <h1 className="heading-label">entry list</h1>
             <ul className="year-list-container">

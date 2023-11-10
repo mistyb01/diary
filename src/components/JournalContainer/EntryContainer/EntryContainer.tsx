@@ -1,7 +1,4 @@
 import Entry from "../../../types/entry";
-import dayjs from "dayjs";
-import CalendarIcon from "../../Icons/CalendarIcon";
-import ClockIcon from "../../Icons/ClockIcon";
 
 import SinglePage from "./SinglePage";
 import ScrollView from "./ScrollView";
