@@ -67,7 +67,7 @@ const EntryContainer = ({
           isPrev={isPrev}
         />
       )}
-      {readingMode === "scroll" && <ScrollView />}
+      {readingMode === "scroll" && <ScrollView entries={entries} />}
     </>
   );
 };
